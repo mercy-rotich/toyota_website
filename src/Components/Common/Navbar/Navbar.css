@@ -1,0 +1,221 @@
+/* Navbar.css */
+
+/* Variables for Toyota Bharat colors */
+:root {
+    --toyota-red: #eb0a1e;
+    --toyota-black: #000000;
+    --toyota-white: #ffffff;
+    --toyota-gray: #f5f5f5;
+    --toyota-dark-gray: #333333;
+    --toyota-hover-gray: #e6e6e6;
+  }
+  
+  .navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--toyota-white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-container.scrolled {
+    padding: 5px 0;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 70px;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 40px;
+    width: auto;
+  }
+  
+  .nav-items {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .nav-item {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-link {
+    color: var(--toyota-black);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    letter-spacing: 0.5px;
+  }
+  
+  .nav-link:hover {
+    color: var(--toyota-red);
+  }
+  
+  .dropdown-toggle {
+    cursor: pointer;
+  }
+  
+  .dropdown-arrow {
+    font-size: 10px;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-item.active .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--toyota-white);
+    min-width: 220px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 1;
+    border-top: 3px solid var(--toyota-red);
+  }
+  
+  .dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  .dropdown-item {
+    display: block;
+    padding: 12px 15px;
+    color: var(--toyota-dark-gray);
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .dropdown-item:hover {
+    background-color: var(--toyota-hover-gray);
+    color: var(--toyota-red);
+  }
+  
+  .nav-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-icon {
+    color: var(--toyota-black);
+    margin-left: 15px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-icon:hover {
+    background-color: var(--toyota-hover-gray);
+    color: var(--toyota-red);
+  }
+  
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .nav-toggle span {
+    width: 100%;
+    height: 2px;
+    background-color: var(--toyota-black);
+    transition: all 0.3s ease;
+  }
+  
+  /* Mobile responsiveness */
+  @media screen and (max-width: 992px) {
+    .nav-toggle {
+      display: flex;
+    }
+  
+    .nav-items {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 70px);
+      background-color: var(--toyota-white);
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      overflow-y: auto;
+    }
+  
+    .nav-items.active {
+      transform: translateX(0);
+    }
+  
+    .nav-item {
+      width: 100%;
+      height: auto;
+      margin: 10px 0;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-link {
+      width: 100%;
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
+    }
+  
+    .dropdown-menu {
+      position: static;
+      width: 100%;
+      box-shadow: none;
+      border-top: none;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      display: none;
+      padding-left: 15px;
+    }
+  
+    .dropdown-menu.show {
+      display: block;
+    }
+  
+    .dropdown-item {
+      padding: 10px 15px;
+    }
+  }
