@@ -1,0 +1,244 @@
+/* Footer.css */
+.toyota-footer {
+    background-color: #f8f8f8;
+    color: #333;
+    font-family: 'Toyota Type', Arial, sans-serif;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  /* Top navigation section */
+  .footer-nav-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  
+  .footer-column {
+    flex: 1;
+    min-width: 180px;
+    margin-bottom: 25px;
+    padding-right: 15px;
+  }
+  
+  .footer-column h4 {
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul li a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-column ul li a:hover {
+    color: #e50000; /* Toyota red */
+  }
+  
+  /* Social icons */
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-color: #ccc;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .icon:hover {
+    background-color: #e50000;
+  }
+  
+  .icon.facebook::before,
+  .icon.twitter::before,
+  .icon.instagram::before,
+  .icon.youtube::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  
+  /* App download buttons */
+  .download-apps h5 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .app-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .app-button {
+    display: block;
+    width: 120px;
+    height: 40px;
+  }
+  
+  .app-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  /* Newsletter section */
+  .footer-newsletter {
+    background-color: #f0f0f0;
+    padding: 30px;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .footer-newsletter h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #000;
+  }
+  
+  .footer-newsletter p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .newsletter-form input {
+    flex: 1;
+    height: 44px;
+    padding: 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+  }
+  
+  .newsletter-form button {
+    background-color: #e50000;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    height: 44px;
+    border-radius: 0 4px 4px 0;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .newsletter-form button:hover {
+    background-color: #c40000;
+  }
+  
+  /* Bottom section */
+  .footer-bottom {
+    border-top: 1px solid #ddd;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-legal-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .footer-legal-links a {
+    color: #666;
+    text-decoration: none;
+    font-size: 13px;
+    margin: 0 15px 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-legal-links a:hover {
+    color: #e50000;
+  }
+  
+  .footer-copyright {
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 992px) {
+    .footer-column {
+      flex-basis: 30%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-column {
+      flex-basis: 45%;
+    }
+    
+    .newsletter-form {
+      flex-direction: column;
+    }
+    
+    .newsletter-form input {
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    
+    .newsletter-form button {
+      border-radius: 4px;
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .footer-column {
+      flex-basis: 100%;
+    }
+    
+    .footer-legal-links {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .footer-legal-links a {
+      margin: 5px 0;
+    }
+  }

@@ -40,9 +40,10 @@
     align-items: center;
   }
   
-  .logo {
-    height: 40px;
-    width: auto;
+  .logo-container a{
+    color: #eb0a1e;
+    font-size: 30px;
+    text-decoration: none;
   }
   
   .nav-items {

@@ -93,7 +93,7 @@ const Navbar = () => {
       <div className="navbar">
         <div className="logo-container">
           <a href="/">
-            <img src="/toyota-logo.png" alt="Toyota Bharat" className="logo" />
+            TOYOTA
           </a>
         </div>
 
