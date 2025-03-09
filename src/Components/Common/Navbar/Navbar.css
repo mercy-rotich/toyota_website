@@ -22,7 +22,7 @@
   }
   
   .navbar-container.scrolled {
-    padding: 5px 0;
+    padding: 1px 0;
   }
   
   .navbar {
@@ -32,7 +32,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    height: 70px;
+    height: 55px;
   }
   
   .logo-container {
@@ -42,7 +42,7 @@
   
   .logo-container a{
     color: #eb0a1e;
-    font-size: 30px;
+    font-size: 28px;
     text-decoration: none;
   }
   
@@ -62,7 +62,7 @@
   .nav-link {
     color: var(--toyota-black);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     padding: 0 15px;
     height: 100%;
