@@ -1,0 +1,189 @@
+:root {
+  --toyota-red: #eb0a1e;
+  --toyota-black: #000000;
+  --toyota-white: #ffffff;
+  --toyota-gray: #f5f5f5;
+  --toyota-dark-gray: #333333;
+  --toyota-hover-gray: #e6e6e6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 50px 0 auto;
+  padding: 20px 20px 50px;
+  min-height: 100vh;
+}
+
+.contact-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding-top: 10px;
+}
+
+.contact-icon {
+  margin-right: 15px;
+}
+
+.header-text {
+  text-align: left;
+}
+
+.header-text h1 {
+  color: var(--toyota-black);
+  font-size: 28px;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.header-text p {
+  color: #888;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.contact-description {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  color: var(--toyota-dark-gray);
+  font-size: 16px;
+}
+
+.contact-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-section {
+  display: flex;
+  border-left: 1px solid #eee;
+  padding-left: 20px;
+  min-height: 140px;
+}
+
+.section-icon {
+  margin-right: 20px;
+  min-width: 60px;
+}
+
+.section-content h2 {
+  color: var(--toyota-dark-gray);
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.section-content p {
+  color: #666;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.phone-numbers {
+  margin: 15px 0;
+}
+
+.main-number {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--toyota-dark-gray);
+}
+
+.toll-free {
+  font-size: 14px;
+  color: #888;
+  margin-left: 5px;
+  font-weight: normal;
+}
+
+.secondary-number {
+  font-size: 20px;
+  color: var(--toyota-dark-gray);
+  margin-top: 5px;
+}
+
+.email-link {
+  color: var(--toyota-red);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+
+.feedback-button {
+  display: inline-block;
+  background-color: var(--toyota-red);
+  color: var(--toyota-white);
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.feedback-button:hover {
+  background-color: #d00919;
+}
+
+.touch-points {
+  display: flex;
+  flex-direction: column;
+}
+
+.touch-point-link {
+  color: var(--toyota-red);
+  text-decoration: none;
+  margin-bottom: 12px;
+  font-weight: 500;
+  position: relative;
+  padding-right: 20px;
+}
+
+.touch-point-link:hover {
+  text-decoration: underline;
+}
+
+.touch-point-link::after {
+  content: "↗";
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Responsive CSS */
+@media screen and (max-width: 768px) {
+  .contact-sections {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .header-text {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .contact-icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
