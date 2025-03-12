@@ -1,0 +1,383 @@
+/* Variables */
+:root {
+    --toyota-red: #eb0a1e;
+    --toyota-black: #000000;
+    --toyota-white: #ffffff;
+    --toyota-gray: #f5f5f5;
+    --toyota-dark-gray: #333333;
+    --toyota-hover-gray: #e6e6e6;
+  }
+  
+  /* Base styles */
+  
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+  }
+  
+  .app-container {
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    position: relative;
+  }
+  
+  /* Top Navbar */
+  .top-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .top-navbar.scrolled {
+    padding: 4px 0;
+  }
+  
+  .navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    height: 56px;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--toyota-red);
+    text-decoration: none;
+  }
+  
+  .desktop-menu {
+    display: none;
+    align-items: center;
+    height: 100%;
+  }
+  
+  @media (min-width: 1024px) {
+    .desktop-menu {
+      display: flex;
+    }
+  }
+  
+  .menu-item-container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-item {
+    color: black;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 0 16px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .menu-item:hover {
+    color: var(--toyota-red);
+  }
+  
+  .dropdown-arrow {
+    margin-left: 4px;
+    font-size: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .dropdown-arrow.rotated {
+    transform: rotate(180deg);
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 224px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    border-top: 2px solid var(--toyota-red);
+  }
+  
+  .dropdown-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  .dropdown-item {
+    display: block;
+    padding: 12px 16px;
+    color: #4a5568;
+    text-decoration: none;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f9f9f9;
+    color: var(--toyota-red);
+  }
+  
+  .navbar-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-button {
+    color: black;
+    padding: 8px;
+    border-radius: 50%;
+    display: inline-flex;
+    margin-left: 8px;
+    text-decoration: none;
+  }
+  
+  .icon-button:hover {
+    color: var(--toyota-red);
+    background-color: #f5f5f5;
+  }
+  
+  .icon {
+    height: 20px;
+    width: 20px;
+  }
+  
+  .hamburger-menu {
+    display: block;
+    margin-left: 16px;
+  }
+  
+  @media (min-width: 1024px) {
+    .hamburger-menu {
+      display: none;
+    }
+  }
+  
+  .hamburger-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .hamburger-line {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3s;
+  }
+  
+  .line1-active {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .line2-active {
+    opacity: 0;
+  }
+  
+  .line3-active {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* Secondary Navbar */
+  .secondary-navbar {
+    background-color: white;
+    border-bottom: 1px solid #edf2f7;
+    padding-top: 56px;
+    
+  }
+  
+  .secondary-navbar-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  
+  .secondary-menu {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    font-size: 11px;
+    overflow-x: auto;
+  }
+  
+  .secondary-menu-item {
+    padding: 8px 16px;
+    color: black;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  
+  .secondary-menu-item:hover {
+    color: var(--toyota-red);
+  }
+  
+  .secondary-menu-item.active {
+    color: var(--toyota-red);
+    border-bottom: 2px solid var(--toyota-red);
+  }
+  
+  /* Main Content */
+  .main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    padding-top: 12px;
+    padding-bottom: 32px;
+  }
+  
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+  
+  .page-title {
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+  .enquiries-button {
+    background-color: #e2e8f0;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .enquiries-button:hover {
+    background-color: #cbd5e0;
+  }
+  
+  /* Product Grid */
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  @media (min-width: 640px) {
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .product-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .product-card {
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product-image {
+    background-color: #f5f5f5;
+    height: 192px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .product-img {
+    max-height: 100%;
+  }
+  
+  .product-logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .toyota-red {
+    color: var(--toyota-red);
+  }
+  
+  .product-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  
+  .card-footer {
+    margin-top: auto;
+  }
+  
+  .enquire-button, .website-button {
+    background-color: var(--toyota-red);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .button-icon {
+    margin-right: 8px;
+    display: inline-flex;
+  }
+  
+  /* Floating Action Buttons */
+  .floating-buttons {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .floating-button {
+    background-color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .floating-button:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .button-icon {
+    height: 24px;
+    width: 24px;
+  }
