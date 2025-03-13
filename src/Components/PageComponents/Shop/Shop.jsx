@@ -1,7 +1,7 @@
 import React from 'react'
-import './MainServices.css'
+import './Shop.css'
 
-const MainServices = () => {
+const Shop = () => {
   return (
     <div className="app-container">
       {/* Top Navbar
@@ -56,21 +56,7 @@ const MainServices = () => {
       </div> */}
 
       {/* Secondary Navbar */}
-      <div className="secondary-navbar">
-        <div className="secondary-navbar-content">
-          <div className="secondary-menu">
-            <a href="#" className="secondary-menu-item">HOME</a>
-            <a href="#" className="secondary-menu-item">SERVICE CORNER</a>
-            <a href="#" className="secondary-menu-item">BOOK SERVICE APPOINTMENT</a>
-            <a href="#" className="secondary-menu-item active">SHOP</a>
-            <a href="#" className="secondary-menu-item">BUY TOYOTA GENUINE PARTS</a>
-            <a href="#" className="secondary-menu-item">PART DISTRIBUTOR</a>
-            <a href="#" className="secondary-menu-item">FAQ</a>
-            <a href="#" className="secondary-menu-item">CONTACT US</a>
-          </div>
-        </div>
-      </div>
-
+      
       {/* Main Content */}
       <div className="main-content">
         <div className="page-header">
@@ -250,4 +236,4 @@ const MainServices = () => {
   )
 }
 
-export default MainServices
+export default Shop
