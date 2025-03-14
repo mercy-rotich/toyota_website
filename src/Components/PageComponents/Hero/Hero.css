@@ -1,6 +1,10 @@
-.hero{
+:root{
+    --navbar-height:55px
+}
+.hero {
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh - var(--navbar-height)); /* Subtract navbar height */
+    margin-top: var(--navbar-height); /* Push content down */
     background: url('../../../assets/background-image.jpg');
     background-size: cover;
     background-position: center;

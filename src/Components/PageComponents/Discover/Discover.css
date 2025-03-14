@@ -1,0 +1,84 @@
+:root {
+    --toyota-red: #eb0a1e;
+    --toyota-black: #000000;
+    --toyota-white: #ffffff;
+    --toyota-gray: #f5f5f5;
+    --toyota-dark-gray: #333333;
+    --toyota-hover-gray: #e6e6e6;
+  }
+  
+  .toyota-section {
+    width: 100%;
+    background-color: var(--toyota-white);
+    padding: 2rem 0;
+  }
+  
+  .toyota-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .toyota-heading {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .toyota-heading h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--toyota-black);
+  }
+  
+  .toyota-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .toyota-car-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .toyota-car-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .toyota-car-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+  
+  .toyota-car-name {
+    font-weight: 700;
+    color: var(--toyota-black);
+    text-align: center;
+  }
+  
+  .toyota-car-price {
+    font-size: 0.875rem;
+    color: var(--toyota-dark-gray);
+    text-align: center;
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (min-width: 768px) {
+    .toyota-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .toyota-grid {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
