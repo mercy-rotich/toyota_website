@@ -1,15 +1,80 @@
 :root{
-    --navbar-height:55px
+    --navbar-height: 55px;
 }
+
 .hero {
     width: 100%;
-    min-height: calc(100vh - var(--navbar-height)); /* Subtract navbar height */
-    margin-top: var(--navbar-height); /* Push content down */
-    background: url('../../../assets/background-image.jpg');
+    min-height: calc(100vh - var(--navbar-height));
+    margin-top: var(--navbar-height);
     background-size: cover;
     background-position: center;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.hero-content {
+    z-index: 1;
+    font-size: 12px;
+    margin-top: 450px;
+    color: rgb(223, 219, 219);
+    
+}
+.hero-content .scroll-down-btn{
+    margin-bottom: -1.2px;
+    
+}
+
+.arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(218, 216, 216);
+    font-size: 23px;
+    font-weight: lighter;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.3s;
+}
+
+.arrow-btn:hover {
+    color: rgba(202, 202, 202, 0.8);
+}
+
+.left-arrow {
+    left: 20px;
+}
+
+.right-arrow {
+    right: 20px;
+}
+
+.dots-container {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: rgb(223, 221, 221);
 }

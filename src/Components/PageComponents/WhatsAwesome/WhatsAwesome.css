@@ -25,9 +25,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 0px;
 }
-
 /* Container for handling overflow */
 .carousel-items-container {
   width: 100%;
@@ -36,17 +35,19 @@
 
 .carousel-items {
   display: flex;
-  gap: 10px;
+  gap: 0;
   transition: transform 0.5s ease-in-out;
 }
 
 .carousel-item {
-  padding: 0 5px;
+  margin: 0 -7px; 
+  padding: 0 3px; /* Changed from 0 5px to 0 3px */
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   flex-shrink: 0;
+  width: 25%;
 }
 
 .carousel-image-container {
@@ -54,6 +55,8 @@
   height: 135px;
   overflow: hidden;
   margin-bottom: 15px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .carousel-image {
@@ -61,8 +64,8 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  margin: 0;
 }
-
 .carousel-item:hover .carousel-image {
   transform: scale(1.05);
 }

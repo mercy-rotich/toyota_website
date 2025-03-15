@@ -1,65 +1,80 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './MoreFromToyota.css';
-import awesome_image1 from '../../../assets/awesome-image1.jpg'
-import awesome_image2 from '../../../assets/awesome-image2.jpg'
-import awesome_image3 from '../../../assets/awesome-image3.jpg'
-import awesome_image4 from '../../../assets/awesome-image4.jpg'
-import awesome_image5 from '../../../assets/awesome-image5.jpg'
-import awesome_image6 from '../../../assets/awesome-image6.jpg'
-import awesome_image7 from '../../../assets/awesome-image7.jpg'
-import awesome_image8 from '../../../assets/awesome-image8.jpg'
+import more_from_toyota_image1 from '../../../assets/more-from-toyota-image1.jpg'
+import more_from_toyota_image2 from '../../../assets/more-from-toyota-image2.jpg'
+import more_from_toyota_image3 from '../../../assets/more-from-toyota-image3.jpg'
+import more_from_toyota_image4 from '../../../assets/more-from-toyota-image4.jpg'
+import more_from_toyota_image5 from '../../../assets/more-from-toyota-image5.jpg'
+import more_from_toyota_image6 from '../../../assets/more-from-toyota-image6.jpg'
+import more_from_toyota_image7 from '../../../assets/more-from-toyota-image7.jpg'
+import more_from_toyota_image8 from '../../../assets/more-from-toyota-image8.jpg'
+import more_from_toyota_image9 from '../../../assets/more-from-toyota-image9.jpg'
+import more_from_toyota_image10 from '../../../assets/more-from-toyota-image10.jpg'
+
 
 const MoreFromToyota = () => {
   const sliderRef = useRef(null);
   const [isAnimating, setIsAnimating] = useState(false);
   const [translateX, setTranslateX] = useState(0);
-  const [currentItems, setCurrentItems] = useState([0, 1, 2, 3]); // Indices of currently visible items
+  const [currentItems, setCurrentItems] = useState([0, 1, 2, 3]); 
 
   const featureItems = [
     {
       id: 1,
-      image: awesome_image1,
+      image: more_from_toyota_image1,
       
     },
     {
       id: 2,
-      image: awesome_image2,
+      image: more_from_toyota_image2,
      
     },
     {
       id: 3,
-      image: awesome_image3,
+      image: more_from_toyota_image3,
       
     },
     {
       id: 4,
-      image: awesome_image4,
+      image: more_from_toyota_image4,
       
     },
     {
       id: 5,
-      image: awesome_image5,
+      image: more_from_toyota_image5,
       
     },
     {
       id: 6,
-      image: awesome_image6,
+      image: more_from_toyota_image6,
      
     },
     {
       id: 7,
-      image: awesome_image7,
+      image: more_from_toyota_image7,
       
     },
     {
       id: 8,
-      image: awesome_image8,
+      image: more_from_toyota_image8,
+    
+    },
+    {
+      id: 9,
+      image: more_from_toyota_image9,
+    
+    },
+    {
+      id: 10,
+      image: more_from_toyota_image10,
     
     }
+    
+    
   ];
 
   const totalItems = featureItems.length;
-  const itemWidth = 25; // Each item takes 25% of the container width
+  const itemWidth = 25; 
 
   useEffect(() => {
     if (sliderRef.current) {
