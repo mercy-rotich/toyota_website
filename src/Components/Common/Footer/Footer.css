@@ -61,19 +61,33 @@
   display: flex;
   gap: 15px;
   margin-bottom: 20px;
+
+  
 }
+.social-icons svg{
+ width: 24px;
+ height: 24px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: #ffffff;
+
+  
+}
+.social-icons svg:hover{
+  color: #eb0a1e;
+}
+
 
 .icon {
   display: block;
-  width: 32px;
-  height: 32px;
-  background-color: #333333;
-  border-radius: 50%;
   position: relative;
+  
+  
 }
 
 .icon:hover {
-  background-color: #eb0a1e;
+  color: #eb0a1e;
 }
 
 .icon.facebook::before,
@@ -85,8 +99,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 16px;
-  height: 16px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;

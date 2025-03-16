@@ -1,5 +1,10 @@
 import React from 'react';
 import './Footer.css';
+import { BsFacebook } from "react-icons/bs";
+import { BsTwitterX } from "react-icons/bs";
+import { GrInstagram } from "react-icons/gr";
+import { TbBrandYoutubeFilled } from "react-icons/tb";
+
 
 const Footer = () => {
   return (
@@ -54,10 +59,10 @@ const Footer = () => {
           <div className="footer-column">
             <h4>Connect with Us</h4>
             <ul className="social-icons">
-              <li><a href="#" className="icon facebook"></a></li>
-              <li><a href="#" className="icon twitter"></a></li>
-              <li><a href="#" className="icon instagram"></a></li>
-              <li><a href="#" className="icon youtube"></a></li>
+              <li><a href="#" className="icon facebook"><BsFacebook /></a></li>
+              <li><a href="#" className="icon twitter"><BsTwitterX /></a></li>
+              <li><a href="#" className="icon instagram">< GrInstagram /></a></li>
+              <li><a href="#" className="icon youtube"><TbBrandYoutubeFilled/></a></li>
             </ul>
             <div className="download-apps">
               <h5>Download Our App</h5>

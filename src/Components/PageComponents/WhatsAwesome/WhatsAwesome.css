@@ -10,6 +10,7 @@
   font-weight: bold;
   text-align: center;
   margin-bottom: 40px;
+  margin-top: -2.3rem;
   color: var(--toyota-black);
 }
 
@@ -26,6 +27,7 @@
   align-items: center;
   justify-content: center;
   gap: 0px;
+  margin-top: -1.5rem;
 }
 /* Container for handling overflow */
 .carousel-items-container {
@@ -71,9 +73,9 @@
 }
 
 .carousel-title {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: var(--toyota-black);
 }
 
@@ -82,10 +84,10 @@
   color: var(--toyota-white);
   border: none;
   padding: 7px 12px;
+  margin-top: -10px;
   font-size: 10px;
   font-weight: bold;
   cursor: pointer;
-  border-radius: 4px;
   transition: background-color 0.3s ease;
 }
 
