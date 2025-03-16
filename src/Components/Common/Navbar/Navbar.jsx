@@ -62,15 +62,11 @@ const Navbar = () => {
       ]
     },
     {
-      title: 'BUY',
+      title: 'BUY ONLINE',
       dropdown: [
-        { title: 'Buy Online', link: '/buyonline' },
-        { title: 'Find a Dealer', link: '/dealers' },
-        { title: 'Book a Test Drive', link: '/test-drive' },
-        { title: 'Download Brochure', link: '/brochures' },
-        { title: 'Price List', link: '/price-list' },
-        { title: 'Finance', link: '/finance' },
-        { title: 'Toyota Insurance', link: '/insurance' },
+        { title: 'Buy online', link: '/buyonline' },
+        { title: 'Buy accesories online', link: '/buyonline' },
+        
       ]
     },
     {
