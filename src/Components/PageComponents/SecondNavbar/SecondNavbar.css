@@ -1,0 +1,112 @@
+/* SecondNavbar.css */
+:root {
+    --toyota-red: #eb0a1e;
+    --toyota-black: #000000;
+    --toyota-white: #ffffff;
+    --toyota-gray: #f5f5f5;
+    --toyota-dark-gray: #333333;
+    --toyota-hover-gray: #e6e6e6;
+    --main-navbar-height: 57.5px; /* Main navbar height */
+  }
+  
+  .second-navbar-container {
+    width: 100%;
+    background-color: var(--toyota-white);
+    border-bottom: 1px solid #e0e0e0;
+    z-index: 900;
+    height: 50px;
+    position: relative; /* Changed from static */
+    transition: none; /* Remove transition to prevent flickering */
+  }
+  
+  .second-navbar-container.fixed {
+    position: fixed;
+    top: var(--main-navbar-height);
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 950;
+  }
+  
+  .second-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 50px;
+    padding-bottom: 15px;
+  }
+  
+  .second-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 20px;
+    color: var(--toyota-black);
+    font-size: 12px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    text-align: center;
+    flex: 1;
+    height: 100%;
+  }
+  
+  .second-nav-item:hover {
+    color: var(--toyota-red);
+  }
+  
+  .second-nav-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    color: var(--toyota-red);
+    height: 24px;
+    width: 24px;
+  }
+  
+  .second-nav-item span {
+    letter-spacing: 0.5px;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 992px) {
+    .second-navbar {
+      overflow-x: auto;
+      justify-content: flex-start;
+      padding: 0 10px;
+    }
+    
+    .second-nav-item {
+      padding: 0 15px;
+      min-width: 100px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .second-navbar-container,
+    .second-navbar {
+      height: 70px;
+    }
+    
+    .second-nav-item {
+      font-size: 10px;
+      min-width: 80px;
+    }
+    
+    .second-nav-icon {
+      margin-bottom: 5px;
+      height: 20px;
+      width: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .second-nav-item {
+      min-width: 70px;
+      padding: 0 10px;
+    }
+  }
