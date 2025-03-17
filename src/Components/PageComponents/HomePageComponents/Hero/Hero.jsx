@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import './Hero.css';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'; 
 import { FaArrowDown } from "react-icons/fa6";
-import hero_image1 from '../../../assets/hero-image1.jpg'
-import hero_image2 from '../../../assets/hero-image2.jpg'
-import hero_image3 from '../../../assets/hero-image3.jpg'
-import hero_image4 from '../../../assets/hero-image4.jpg'
-import hero_image5 from '../../../assets/hero-image5.jpg'
-import hero_image6 from '../../../assets/hero-image6.jpg'
-import hero_image7 from '../../../assets/hero-image7.jpg'
+import hero_image1 from '../../../../assets/hero-image1.jpg'
+import hero_image2 from '../../../../assets/hero-image2.jpg'
+import hero_image3 from '../../../../assets/hero-image3.jpg'
+import hero_image4 from '../../../../assets/hero-image4.jpg'
+import hero_image5 from '../../../../assets/hero-image5.jpg'
+import hero_image6 from '../../../../assets/hero-image6.jpg'
+import hero_image7 from '../../../../assets/hero-image7.jpg'
 
 
 const Hero = () => {

@@ -64,7 +64,7 @@ const Navbar = () => {
     {
       title: 'BUY ONLINE',
       dropdown: [
-        { title: 'Buy online', link: '/buyonline' },
+        { title: 'Buy online', link: '/buyonline', openInNew: true },
         { title: 'Buy accesories online', link: '/buyonline' },
         
       ]

@@ -1,13 +1,13 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './WhatsAwesome.css';
-import awesome_image1 from '../../../assets/awesome-image1.jpg'
-import awesome_image2 from '../../../assets/awesome-image2.jpg'
-import awesome_image3 from '../../../assets/awesome-image3.jpg'
-import awesome_image4 from '../../../assets/awesome-image4.jpg'
-import awesome_image5 from '../../../assets/awesome-image5.jpg'
-import awesome_image6 from '../../../assets/awesome-image6.jpg'
-import awesome_image7 from '../../../assets/awesome-image7.jpg'
-import awesome_image8 from '../../../assets/awesome-image8.jpg'
+import awesome_image1 from '../../../../assets/awesome-image1.jpg'
+import awesome_image2 from '../../../../assets/awesome-image2.jpg'
+import awesome_image3 from '../../../../assets/awesome-image3.jpg'
+import awesome_image4 from '../../../../assets/awesome-image4.jpg'
+import awesome_image5 from '../../../../assets/awesome-image5.jpg'
+import awesome_image6 from '../../../../assets/awesome-image6.jpg'
+import awesome_image7 from '../../../../assets/awesome-image7.jpg'
+import awesome_image8 from '../../../../assets/awesome-image8.jpg'
 
 const WhatsAwesome = () => {
   const sliderRef = useRef(null);
