@@ -8,7 +8,10 @@ import MainServices from './Pages/Services/MainServices/MainServices'
 import Shop from './Components/PageComponents/Shop/Shop'
 import ServicesContact from './Components/PageComponents/ServicesContact/ServicesContact'
 
+
 const App = () => {
+  
+  
   return (
     <div>
 
@@ -27,8 +30,13 @@ const App = () => {
         <Route path='/faq' element={<MainServices/>}/>
         <Route path='/contact' element={<ServicesContact/>}/>
         
+       
+
+        
+        
 
       </Routes>
+      
       <Footer/>
       
       
