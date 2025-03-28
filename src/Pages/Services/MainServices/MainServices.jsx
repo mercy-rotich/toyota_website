@@ -4,7 +4,7 @@ import { Link, Route } from 'react-router-dom';
 import './MainServices.css';
 import Shop from '../../../Components/PageComponents/Shop/Shop';
 import ServicesContact from '../../../Components/PageComponents/ServicesContact/ServicesContact';
-import MainServicesHomePage from './MainServicesHomePage/MainServicesHomePage';
+
 
 const MainServices = () => {
   return (
