@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Hero.css';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'; 
 import { FaArrowDown } from "react-icons/fa6";
@@ -10,9 +10,7 @@ import hero_image5 from '../../../../assets/hero-image5.jpg'
 import hero_image6 from '../../../../assets/hero-image6.jpg'
 import hero_image7 from '../../../../assets/hero-image7.jpg'
 
-
 const Hero = () => {
-  // Array of your background images
   const backgroundImages = [
     hero_image1,
     hero_image2,
@@ -21,8 +19,6 @@ const Hero = () => {
     hero_image5,
     hero_image6,
     hero_image7,
-    
-    
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -39,6 +35,13 @@ const Hero = () => {
     );
   };
 
+  // automatic slideshow functionality
+  useEffect(() => {
+    const slideInterval = setInterval(nextSlide, 3000); 
+
+    return () => clearInterval(slideInterval);
+  }, []); 
+
   return (
     <div 
       className='hero'
@@ -50,7 +53,7 @@ const Hero = () => {
       
       <div className="hero-content">
         SCROLL DOWN <FaArrowDown className='scroll-down-btn'/>
-        {/* Your hero content goes here */}
+       
       </div>
       
       <button className="arrow-btn right-arrow" onClick={nextSlide}>
