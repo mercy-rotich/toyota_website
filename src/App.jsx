@@ -6,8 +6,6 @@ import HomePage from './Pages/HomePage'
 import ContactUsPage from './Pages/ContactUs/ContactUs'
 import MainServices from './Pages/Services/MainServices/MainServices'
 import Shop from './Components/PageComponents/Shop/Shop'
-import ServicesContact from './Components/PageComponents/ServicesContact/ServicesContact'
-
 
 const App = () => {
   
@@ -29,7 +27,7 @@ const App = () => {
         <Route path='/genuine-parts' element={<MainServices/>}/>
         <Route path='/part-distributor' element={<MainServices/>}/>
         <Route path='/faq' element={<MainServices/>}/>
-        <Route path='/contact' element={<ServicesContact/>}/>
+        <Route path="contact" element={<MainServices/>}/>
         
        
 
