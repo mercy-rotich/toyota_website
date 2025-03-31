@@ -1,23 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import './ServicesHero.css';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'; 
-import hero_image1 from '../../../../assets/hero-image1.jpg'
-import hero_image2 from '../../../../assets/hero-image2.jpg'
-import hero_image3 from '../../../../assets/hero-image3.jpg'
-import hero_image4 from '../../../../assets/hero-image4.jpg'
-import hero_image5 from '../../../../assets/hero-image5.jpg'
-import hero_image6 from '../../../../assets/hero-image6.jpg'
-import hero_image7 from '../../../../assets/hero-image7.jpg'
+import servicehero_image1 from '../../../../assets/servicehero-image1.jpg'
+import servicehero_image2 from '../../../../assets/servicehero-image2.jpg'
+import servicehero_image3 from '../../../../assets/servicehero-image3.jpg'
+import servicehero_image4 from '../../../../assets/servicehero-image4.jpg'
+import servicehero_image5 from '../../../../assets/servicehero-image5.jpg'
+import servicehero_image6 from '../../../../assets/servicehero-image6.jpg'
 
 const ServicesHero = () => {
   const backgroundImages = [
-    hero_image1,
-    hero_image2,
-    hero_image3,
-    hero_image4,
-    hero_image5,
-    hero_image6,
-    hero_image7,
+    servicehero_image1,
+    servicehero_image2,
+    servicehero_image3,
+    servicehero_image4,
+    servicehero_image5,
+    servicehero_image6,
+    
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
