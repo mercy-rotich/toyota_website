@@ -1,15 +1,15 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './MoreFromToyota.css';
-import more_from_toyota_image1 from '../../../../assets/more-from-toyota-image1.jpg'
-import more_from_toyota_image2 from '../../../../assets/more-from-toyota-image2.jpg'
-import more_from_toyota_image3 from '../../../../assets/more-from-toyota-image3.jpg'
-import more_from_toyota_image4 from '../../../../assets/more-from-toyota-image4.jpg'
-import more_from_toyota_image5 from '../../../../assets/more-from-toyota-image5.jpg'
-import more_from_toyota_image6 from '../../../../assets/more-from-toyota-image6.jpg'
-import more_from_toyota_image7 from '../../../../assets/more-from-toyota-image7.jpg'
-import more_from_toyota_image8 from '../../../../assets/more-from-toyota-image8.jpg'
-import more_from_toyota_image9 from '../../../../assets/more-from-toyota-image9.jpg'
-import more_from_toyota_image10 from '../../../../assets/more-from-toyota-image10.jpg'
+import more_from_toyota_image1 from '../../../assets/more-from-toyota-image1.jpg'
+import more_from_toyota_image2 from '../../../assets/more-from-toyota-image2.jpg'
+import more_from_toyota_image3 from '../../../assets/more-from-toyota-image3.jpg'
+import more_from_toyota_image4 from '../../../assets/more-from-toyota-image4.jpg'
+import more_from_toyota_image5 from '../../../assets/more-from-toyota-image5.jpg'
+import more_from_toyota_image6 from '../../../assets/more-from-toyota-image6.jpg'
+import more_from_toyota_image7 from '../../../assets/more-from-toyota-image7.jpg'
+import more_from_toyota_image8 from '../../../assets/more-from-toyota-image8.jpg'
+import more_from_toyota_image9 from '../../../assets/more-from-toyota-image9.jpg'
+import more_from_toyota_image10 from '../../../assets/more-from-toyota-image10.jpg'
 
 
 const MoreFromToyota = () => {

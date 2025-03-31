@@ -1,17 +1,17 @@
 import React from 'react';
 import './Discover.css'; 
-import glanza_image from '../../../../assets/glanza-image.jpg';
-import urbanCruser_image from '../../../../assets/urbanCruser-image.jpg';
-import Rumion_image from '../../../../assets/Rumion-image.jpg';
-import hyryder_image from '../../../../assets/hyryder-image.jpg';
-import innovacrystar_image from '../../../../assets/innovacrysta-image.jpg';
-import hycross_image from '../../../../assets/hycross-image.jpg';
-import hilux_image from '../../../../assets/hilux-image.jpg';
-import fortuner_image from '../../../../assets/fortuner-image.jpg';
-import legender_image from '../../../../assets/legender-image.jpg';
-import camry_image from '../../../../assets/camry-image.jpg';
-import vellfire_image from '../../../../assets/vellfire-image.jpg';
-import landcruiser_image from '../../../../assets/landcruiser-image.jpg';
+import glanza_image from '../../../assets/glanza-image.jpg';
+import urbanCruser_image from '../../../assets/urbanCruser-image.jpg';
+import Rumion_image from '../../../assets/Rumion-image.jpg';
+import hyryder_image from '../../../assets/hyryder-image.jpg';
+import innovacrystar_image from './../../../assets/innovacrysta-image.jpg';
+import hycross_image from '../../../assets/hycross-image.jpg';
+import hilux_image from '../../../assets/hilux-image.jpg';
+import fortuner_image from '../../../assets/fortuner-image.jpg';
+import legender_image from '../../../assets/legender-image.jpg';
+import camry_image from '../../../assets/camry-image.jpg';
+import vellfire_image from '../../../assets/vellfire-image.jpg';
+import landcruiser_image from '../../../assets/landcruiser-image.jpg';
 
 
 

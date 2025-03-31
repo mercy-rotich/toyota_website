@@ -15,7 +15,7 @@ const ServiceNavbar = () => {
             <Link to="/genuine-parts" className="secondary-menu-item">BUY TOYOTA GENUINE PARTS</Link>
             <Link to="/part-distributor" className="secondary-menu-item">PART DISTRIBUTOR</Link>
             <Link to="/faq" className="secondary-menu-item">FAQ</Link>
-            <Link to="/contact" className="secondary-menu-item">CONTACT US</Link>
+            <Link to="/contactus" className="secondary-menu-item">CONTACT US</Link>
           </div>
         </div>
       </div>

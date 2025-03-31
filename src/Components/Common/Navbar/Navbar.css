@@ -19,7 +19,8 @@
   }
   
   .navbar {
-    display: flex;:root {
+    display: flex;
+    :root {
     --toyota-red: #eb0a1e;
     --toyota-black: #000000;
     --toyota-white: #ffffff;

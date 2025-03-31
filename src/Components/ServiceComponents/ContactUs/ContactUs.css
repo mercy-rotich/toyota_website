@@ -19,6 +19,8 @@
   margin: 50px 0 auto;
   padding: 20px 20px 50px;
   min-height: 100vh;
+  z-index: 0;
+  margin-top: 5.5rem;
 }
 
 .contact-header {
