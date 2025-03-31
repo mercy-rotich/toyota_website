@@ -1,21 +1,33 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Common/Navbar/Navbar";
-import ServiceNavbar from "./Components/Common/ServiceNavbar/ServiceNavbar";
 import Footer from "./Components/Common/Footer/Footer";
 import HomePage from "./Pages/HomePage";
 import ContactUsPage from "./Components/ServiceComponents/ContactUs/ContactUs";
 import Services from "./Pages/ServicesPage/Services";
 
+// Fallback component for debugging route issues
+const NotFound = () => (
+  <div style={{ padding: "100px 20px", textAlign: "center" }}>
+    <h1>Page Not Found</h1>
+    <p>The page you're looking for doesn't exist.</p>
+  </div>
+);
+
 const App = () => {
   return (
     <div>
       <Navbar />
-      <ServiceNavbar /> 
+      
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/contactus" element={<ContactUsPage />} />
+        
+        
         <Route path="/services/*" element={<Services />} />
+        
+        {/* Catch all for debugging */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>

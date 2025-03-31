@@ -1,26 +1,40 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import './ServiceNavbar.css'
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import './ServiceNavbar.css';
 
 const ServiceNavbar = () => {
+  const location = useLocation();
+  console.log("Current location:", location.pathname);
+  
+  // Service navigation items
+  const serviceNavItems = [
+    { title: ' HOME', path: '/services' },  // Changed to base services path
+    { title: 'BOOK SERVICE APPOINTMENT', path: '/services/appointment' },
+    { title: 'SERVICE CORNER', path: '/services/history' },
+    { title: 'SHOP', path: '/services/maintenance' },
+    { title: 'BUY TOYOTA ENGINE PARTS', path: '/services/warranty' },
+    { title: 'PART DISTRIBUTOR', path: '/services/shop' },
+    { title: 'CONTACT US', path: '/services/contactus' },
+    
+  ];
+
   return (
-    <div>
-      <div className="secondary-navbar">
-        <div className="secondary-navbar-content">
-          <div className="secondary-menu">
-            <Link to="/serviceshomepage" className="secondary-menu-item">HOME</Link>
-            <Link to="/service-corner" className="secondary-menu-item">SERVICE CORNER</Link>
-            <Link to="/book-service" className="secondary-menu-item">BOOK SERVICE APPOINTMENT</Link>
-            <Link to="/shop" className="secondary-menu-item active">SHOP</Link>
-            <Link to="/genuine-parts" className="secondary-menu-item">BUY TOYOTA GENUINE PARTS</Link>
-            <Link to="/part-distributor" className="secondary-menu-item">PART DISTRIBUTOR</Link>
-            <Link to="/faq" className="secondary-menu-item">FAQ</Link>
-            <Link to="/contactus" className="secondary-menu-item">CONTACT US</Link>
-          </div>
+    <div className="service-navbar">
+      <div className="service-nav-container">
+        <div className="service-nav-items">
+          {serviceNavItems.map((item, index) => (
+            <Link 
+              key={index} 
+              to={item.path} 
+              className={`service-nav-item ${location.pathname === item.path ? 'active' : ''}`}
+            >
+              {item.title}
+            </Link>
+          ))}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ServiceNavbar
+export default ServiceNavbar;

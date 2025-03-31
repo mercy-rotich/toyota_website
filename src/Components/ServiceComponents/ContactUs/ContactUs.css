@@ -1,11 +1,4 @@
-:root {
-  --toyota-red: #eb0a1e;
-  --toyota-black: #000000;
-  --toyota-white: #ffffff;
-  --toyota-gray: #f5f5f5;
-  --toyota-dark-gray: #333333;
-  --toyota-hover-gray: #e6e6e6;
-}
+
 
 * {
   margin: 0;
@@ -16,11 +9,12 @@
 
 .contact-container {
   max-width: 1200px;
-  margin: 50px 0 auto;
+  margin: auto;
   padding: 20px 20px 50px;
   min-height: 100vh;
   z-index: 0;
-  margin-top: 5.5rem;
+  margin-top: -10rem;
+  
 }
 
 .contact-header {
@@ -41,14 +35,14 @@
 
 .header-text h1 {
   color: var(--toyota-black);
-  font-size: 28px;
+  font-size: 25px;
   margin-bottom: 5px;
   font-weight: 700;
 }
 
 .header-text p {
   color: #888;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 1px;
 }
 
@@ -83,15 +77,15 @@
 
 .section-content h2 {
   color: var(--toyota-dark-gray);
-  font-size: 22px;
+  font-size: 19px;
   margin-bottom: 15px;
   font-weight: 600;
 }
 
 .section-content p {
   color: #666;
-  margin-bottom: 10px;
-  font-size: 15px;
+  margin-bottom: 2px;
+  font-size: 13px;
 }
 
 .phone-numbers {
@@ -99,20 +93,20 @@
 }
 
 .main-number {
-  font-size: 22px;
+  font-size: 19px;
   font-weight: 600;
   color: var(--toyota-dark-gray);
 }
 
 .toll-free {
-  font-size: 14px;
+  font-size: 12px;
   color: #888;
   margin-left: 5px;
   font-weight: normal;
 }
 
 .secondary-number {
-  font-size: 20px;
+  font-size: 17px;
   color: var(--toyota-dark-gray);
   margin-top: 5px;
 }
@@ -134,7 +128,7 @@
   padding: 10px 20px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   margin-top: 10px;
   transition: background-color 0.3s;
 }
@@ -168,7 +162,7 @@
   top: 0;
 }
 
-/* Responsive CSS */
+
 @media screen and (max-width: 768px) {
   .contact-sections {
     grid-template-columns: 1fr;

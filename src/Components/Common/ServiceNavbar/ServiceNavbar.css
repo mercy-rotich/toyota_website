@@ -1,21 +1,24 @@
-.secondary-navbar {
-    background-color: white;
-    border-bottom: 1px solid #edf2f7;
-    padding-top: 56px;
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    z-index: 2; 
+:root {
+    --toyota-red: #e50000;
   }
   
-  .secondary-navbar-content {
+  .service-navbar {
+    background-color: white;
+    border-bottom: 1px solid #edf2f7;
+    position: fixed; 
+    top: 56px; /* Position it right below the main navbar */
+    left: 0; 
+    width: 100%; 
+    z-index: 10;
+  }
+  
+  .service-nav-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 16px;
   }
   
-  .secondary-menu {
+  .service-nav-items {
     display: flex;
     align-items: center;
     height: 56px;
@@ -23,20 +26,49 @@
     overflow-x: auto;
   }
   
-  .secondary-menu-item {
+  .service-nav-item {
     padding: 8px 16px;
     color: black;
     text-decoration: none;
     white-space: nowrap;
     border-right: 1px solid #e0e0e0;
+    transition: color 0.3s, border-bottom 0.3s;
   }
   
-  .secondary-menu-item:hover {
+  .service-nav-item:hover {
     color: var(--toyota-red);
     border-bottom: 1px solid var(--toyota-red);
   }
   
-  .secondary-menu-item:active {
+  .service-nav-item.active {
     color: var(--toyota-red);
     border-bottom: 2px solid var(--toyota-red);
+  }
+  
+  .services-layout {
+    padding-top: 112px; /* Combined height of main navbar and service navbar */
+  }
+  
+  .services-content {
+    min-height: 500px; /* Ensures content is visible */
+    padding: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .service-navbar {
+      top: 48px; /* Adjusted for mobile */
+    }
+    
+    .service-nav-items {
+      height: 48px;
+    }
+    
+    .service-nav-item {
+      padding: 8px 12px;
+      font-size: 10px;
+    }
+    
+    .services-layout {
+      padding-top: 96px; /* Adjusted for mobile */
+    }
   }
