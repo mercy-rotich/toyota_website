@@ -1,0 +1,83 @@
+:root{
+    --navbar-height:50px;
+}
+
+.services-hero {
+    width: 100% !important;
+    min-height: calc(100vh - 100px);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: background-image 0.5s ease-in-out;
+
+    margin-top: 106px; 
+}
+
+
+
+.services-hero .hero-content {
+    z-index: 1;
+    font-size: 12px;
+    color: rgb(223, 219, 219);
+    
+    
+}
+.services-hero .hero-content .scroll-down-btn{
+    margin-bottom: -1.2px;
+    
+}
+
+.services-hero .arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(218, 216, 216);
+    font-size: 23px;
+    font-weight: lighter;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.3s;
+}
+
+.services-hero .arrow-btn:hover {
+    color: rgba(202, 202, 202, 0.8);
+}
+
+.services-hero .left-arrow {
+    left: 20px;
+}
+
+.right-arrow {
+    right: 20px;
+}
+
+.services-hero .dots-container {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.services-hero .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.services-hero .dot.active {
+    background-color: rgb(223, 221, 221);
+}

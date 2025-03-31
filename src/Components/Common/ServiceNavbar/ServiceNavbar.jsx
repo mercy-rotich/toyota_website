@@ -8,7 +8,7 @@ const ServiceNavbar = () => {
   
   // Service navigation items
   const serviceNavItems = [
-    { title: ' HOME', path: '/services' },  // Changed to base services path
+    { title: ' HOME', path: '/services/home' },  // Changed to base services path
     { title: 'BOOK SERVICE APPOINTMENT', path: '/services/appointment' },
     { title: 'SERVICE CORNER', path: '/services/history' },
     { title: 'SHOP', path: '/services/maintenance' },

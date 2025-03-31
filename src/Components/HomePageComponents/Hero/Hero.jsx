@@ -44,7 +44,7 @@ const Hero = () => {
 
   return (
     <div 
-      className='hero'
+      className='main-hero'
       style={{ backgroundImage: `url(${backgroundImages[currentImageIndex]})` }}
     >
       <button className="arrow-btn left-arrow" onClick={prevSlide}>

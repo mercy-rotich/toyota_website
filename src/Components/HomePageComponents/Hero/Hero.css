@@ -2,7 +2,7 @@
     --navbar-height: 55px;
 }
 
-.hero {
+.main-hero {
     width: 100%;
     min-height: calc(100vh - var(--navbar-height));
     margin-top: var(--navbar-height);
@@ -16,19 +16,19 @@
     transition: background-image 0.5s ease-in-out;
 }
 
-.hero-content {
+.main-hero .hero-content {
     z-index: 1;
     font-size: 12px;
     margin-top: 450px;
     color: rgb(223, 219, 219);
     
 }
-.hero-content .scroll-down-btn{
+.main-hero .hero-content .scroll-down-btn{
     margin-bottom: -1.2px;
     
 }
 
-.arrow-btn {
+.main-hero .arrow-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -45,19 +45,19 @@
     transition: background-color 0.3s;
 }
 
-.arrow-btn:hover {
+.main-hero .arrow-btn:hover {
     color: rgba(202, 202, 202, 0.8);
 }
 
-.left-arrow {
+.main-hero .left-arrow {
     left: 20px;
 }
 
-.right-arrow {
+.main-hero .right-arrow {
     right: 20px;
 }
 
-.dots-container {
+.main-hero .dots-container {
     position: absolute;
     bottom: 20px;
     display: flex;
@@ -65,7 +65,7 @@
     width: 100%;
 }
 
-.dot {
+.main-hero .dot {
     width: 9px;
     height: 9px;
     border-radius: 50%;
@@ -75,6 +75,6 @@
     transition: background-color 0.3s;
 }
 
-.dot.active {
+.main-hero .dot.active {
     background-color: rgb(223, 221, 221);
 }

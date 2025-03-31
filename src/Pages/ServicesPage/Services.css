@@ -1,0 +1,13 @@
+.services-content {
+    width: 100%;
+    padding: 0; 
+    margin: 0 auto; 
+}
+.services-layout {
+    padding-top: 112px;
+    width: 100vw !important;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
