@@ -5,9 +5,10 @@ import ServicesHome from '../../Components/ServiceComponents/ServicesHome/Servic
 import './Services.css'
 import ServicesContact from '../../Components/ServiceComponents/ServicesContact/ServicesContact';
 import ServiceAppointment from '../../Components/ServiceComponents/ServiceAppointment/ServiceAppointment';
+import ServiceShop from '../../Components/ServiceComponents/ServiceShop/ServiceShop';
 // Simple fallback components for missing components
 const BookAppointment = () => <div className="service-page">Book Appointment Page</div>;
-const ServiceShop = () => <div className="service-page">Service Shop Page</div>;
+// const ServiceShop = () => <div className="service-page">Service Shop Page</div>;
 
 // Layout component that will always render the navbar inside services pages
 const ServicesLayout = () => {

@@ -1,10 +1,3 @@
-:root {
-  --toyota-red: #e50000;
-  --toyota-white: #ffffff;
-  --toyota-black: #000000;
-  --toyota-dark-gray: #333333;
-  --toyota-light-gray: #f2f2f2;
-}
 
 .service-appointment-container {
   display: flex;

@@ -11,7 +11,7 @@ const ServiceNavbar = () => {
     { title: ' HOME', path: '/services/home' },  // Changed to base services path
     { title: 'BOOK SERVICE APPOINTMENT', path: '/services/serviceappointment' },
     { title: 'SERVICE CORNER', path: '/services/history' },
-    { title: 'SHOP', path: '/services/maintenance' },
+    { title: 'SHOP', path: '/services/shop' },
     { title: 'BUY TOYOTA ENGINE PARTS', path: '/services/warranty' },
     { title: 'PART DISTRIBUTOR', path: '/services/shop' },
     { title: 'CONTACT US', path: '/services/servicescontact' },

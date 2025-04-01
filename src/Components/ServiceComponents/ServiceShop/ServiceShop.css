@@ -1,0 +1,153 @@
+
+  .shop-page-container {
+    padding: 20px;
+    position: relative;
+    max-width: 1450px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    margin-top: 5rem;
+  }
+  
+  .shop-heading {
+    font-size: 42px;
+    font-weight: bold;
+    color: var(--toyota-black);
+    margin-bottom: 30px;
+    margin-top: 10px;
+  }
+  
+  .enquiries-link {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+  }
+  
+  .enquiries-link a {
+    text-decoration: none;
+    color: var(--toyota-black);
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  .shop-items-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .shop-items-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+  }
+  
+  .shop-item {
+    background-color: var(--toyota-white);
+    border: 1px solid #e0e0e0;
+    width: 180px;
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shop-item-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  .shop-item-image-container {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--toyota-gray);
+    margin-bottom: 15px;
+  }
+  
+  .shop-item-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .shop-item-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--toyota-black);
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .shop-item-description {
+    font-size: 12px;
+    color: var(--toyota-dark-gray);
+    text-align: left;
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+  
+  .shop-item-button-container {
+    width: 100%;
+    position: relative;
+  }
+  
+  .shop-item-button {
+    width: 100%;
+    padding: 8px 0;
+    background-color: var(--toyota-red);
+    color: var(--toyota-white);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .button-icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--toyota-white);
+    display: inline-block;
+  }
+  
+  .button-text {
+    margin-left: 5px;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 1200px) {
+    .shop-items-row {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .shop-item {
+      width: calc(50% - 20px);
+    }
+    
+    .shop-heading {
+      font-size: 32px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .shop-item {
+      width: 100%;
+    }
+  }
