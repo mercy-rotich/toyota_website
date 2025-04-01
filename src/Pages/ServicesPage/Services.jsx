@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { Route, Routes, Outlet } from 'react-router-dom';
 import ServiceNavbar from '../../Components/Common/ServiceNavbar/ServiceNavbar';
 import ServicesHome from '../../Components/ServiceComponents/ServicesHome/ServicesHome';
-import ContactUs from '../../Components/ServiceComponents/ContactUs/ContactUs'; 
 import './Services.css'
+import ServicesContact from '../../Components/ServiceComponents/ServicesContact/ServicesContact';
 
 // Simple fallback components for missing components
 const BookAppointment = () => <div className="service-page">Book Appointment Page</div>;
@@ -46,7 +46,7 @@ const Services = () => {
         <Route element={<ServicesLayout />}>
           <Route index element={<ServicesHome />} />
           <Route path="home" element={<ServicesHome />} />
-          <Route path="contactus" element={<ContactUs />} />
+          <Route path="servicescontact" element={<ServicesContact />} />
           <Route path="appointment" element={<BookAppointment />} />
           <Route path="shop" element={<ServiceShop />} />
           <Route path="*" element={<ServicesFallback />} />

@@ -14,7 +14,7 @@ const ServiceNavbar = () => {
     { title: 'SHOP', path: '/services/maintenance' },
     { title: 'BUY TOYOTA ENGINE PARTS', path: '/services/warranty' },
     { title: 'PART DISTRIBUTOR', path: '/services/shop' },
-    { title: 'CONTACT US', path: '/services/contactus' },
+    { title: 'CONTACT US', path: '/services/servicescontact' },
     
   ];
 
