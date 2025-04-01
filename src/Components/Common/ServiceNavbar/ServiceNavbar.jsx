@@ -8,12 +8,15 @@ const ServiceNavbar = () => {
   
   // Service navigation items
   const serviceNavItems = [
-    { title: ' HOME', path: '/services/home' },  // Changed to base services path
+    { title: ' HOME', path: '/services/home' },  
     { title: 'BOOK SERVICE APPOINTMENT', path: '/services/serviceappointment' },
     { title: 'SERVICE CORNER', path: '/services/history' },
     { title: 'SHOP', path: '/services/shop' },
-    { title: 'BUY TOYOTA ENGINE PARTS', path: '/services/warranty' },
-    { title: 'PART DISTRIBUTOR', path: '/services/shop' },
+    { title: 'SERVICE COST CALCULATOR', path: '/services/warranty' },
+    { title: 'SERVICE DEALER LOCATOR', path: '/services/servicedealerlocator' },
+    { title: 'OWNERS MANUAL', path: '/services/ownersmanual' },
+    { title: 'PART DISTRIBUTOR', path: '/services/partdistributor' },
+    { title: 'FAQ', path: '/services/faq' },
     { title: 'CONTACT US', path: '/services/servicescontact' },
     
   ];

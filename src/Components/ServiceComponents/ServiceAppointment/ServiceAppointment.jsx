@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './ServiceAppointment.css';
-import serviceappointment_image from '../../../assets/serviceappointment.jpg'
 
 const ServiceAppointment = () => {
   const [formData, setFormData] = useState({
@@ -205,6 +204,7 @@ const ServiceAppointment = () => {
       </div>
 
       <div className="info-section">
+        
         <div className="info-image"></div>
         <div className="info-content">
           <h2>Did you know?</h2>

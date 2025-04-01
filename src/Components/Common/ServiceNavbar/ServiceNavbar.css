@@ -6,7 +6,7 @@
     background-color: white;
     border-bottom: 1px solid #edf2f7;
     position: fixed; 
-    top: 56px; /* Position it right below the main navbar */
+    top: 56px; 
     left: 0; 
     width: 100%; 
     z-index: 10;
@@ -23,8 +23,10 @@
     display: flex;
     align-items: center;
     height: 56px;
-    font-size: 11px;
+    font-size: 10px;
     overflow-x: auto;
+    gap: 3px;
+    
   }
   
   .service-nav-item {
@@ -43,21 +45,21 @@
   
   .service-nav-item.active {
     color: var(--toyota-red);
-    border-bottom: 2px solid var(--toyota-red);
+    border-bottom: 1px solid var(--toyota-red);
   }
   
   .services-layout {
-    padding-top: 112px; /* Combined height of main navbar and service navbar */
+    padding-top: 112px; 
   }
   
   .services-content {
-    min-height: 500px; /* Ensures content is visible */
+    min-height: 500px; 
     padding: 20px;
   }
   
   @media (max-width: 768px) {
     .service-navbar {
-      top: 48px; /* Adjusted for mobile */
+      top: 48px; 
     }
     
     .service-nav-items {

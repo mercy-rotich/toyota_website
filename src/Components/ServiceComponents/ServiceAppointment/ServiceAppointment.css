@@ -145,8 +145,11 @@
   position: relative;
   overflow: hidden;
   background-color: var(--toyota-white);
+  border-top: 4px solid var(--toyota-red);
+  left: 10px;
  
 }
+
 
 .info-image {
   height: 170px;
@@ -157,17 +160,18 @@
   background-repeat: no-repeat;
   position: absolute;
   top: 0;
-  left: 10px;
+  left: 0;
 }
 
 .info-content {
   position: absolute;
   bottom: 0;
-  left: -16px;
-  padding: 25px;
+  left:0;
+  padding: 25px 0;
   background-color: rgba(255, 255, 255, 0.85);
   width: 100%;
-  margin-bottom: 18.5rem;
+  margin-bottom: 18rem;
+  z-index: 0;
   
 }
 
