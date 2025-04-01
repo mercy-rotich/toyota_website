@@ -9,7 +9,7 @@ const ServiceNavbar = () => {
   // Service navigation items
   const serviceNavItems = [
     { title: ' HOME', path: '/services/home' },  // Changed to base services path
-    { title: 'BOOK SERVICE APPOINTMENT', path: '/services/appointment' },
+    { title: 'BOOK SERVICE APPOINTMENT', path: '/services/serviceappointment' },
     { title: 'SERVICE CORNER', path: '/services/history' },
     { title: 'SHOP', path: '/services/maintenance' },
     { title: 'BUY TOYOTA ENGINE PARTS', path: '/services/warranty' },

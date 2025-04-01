@@ -4,7 +4,7 @@ import ServiceNavbar from '../../Components/Common/ServiceNavbar/ServiceNavbar';
 import ServicesHome from '../../Components/ServiceComponents/ServicesHome/ServicesHome';
 import './Services.css'
 import ServicesContact from '../../Components/ServiceComponents/ServicesContact/ServicesContact';
-
+import ServiceAppointment from '../../Components/ServiceComponents/ServiceAppointment/ServiceAppointment';
 // Simple fallback components for missing components
 const BookAppointment = () => <div className="service-page">Book Appointment Page</div>;
 const ServiceShop = () => <div className="service-page">Service Shop Page</div>;
@@ -47,7 +47,7 @@ const Services = () => {
           <Route index element={<ServicesHome />} />
           <Route path="home" element={<ServicesHome />} />
           <Route path="servicescontact" element={<ServicesContact />} />
-          <Route path="appointment" element={<BookAppointment />} />
+          <Route path="serviceappointment" element={<ServiceAppointment/>} />
           <Route path="shop" element={<ServiceShop />} />
           <Route path="*" element={<ServicesFallback />} />
         </Route>

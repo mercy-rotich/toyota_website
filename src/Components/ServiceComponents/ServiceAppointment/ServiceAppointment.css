@@ -1,0 +1,245 @@
+:root {
+  --toyota-red: #e50000;
+  --toyota-white: #ffffff;
+  --toyota-black: #000000;
+  --toyota-dark-gray: #333333;
+  --toyota-light-gray: #f2f2f2;
+}
+
+.service-appointment-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin:  auto;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 7rem;
+  margin-bottom: 10px;
+}
+
+.form-section {
+  flex: 0 0 32%;
+  background-color: var(--toyota-red);
+  padding: 20px;
+  color: var(--toyota-white);
+}
+
+.booking-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendar-icon {
+  margin-right: 15px;
+}
+
+.calendar-icon svg {
+  fill: var(--toyota-white);
+  width: 30px;
+  height: 30px;
+}
+
+.booking-header h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.booking-header p {
+  margin: 5px 0 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group select {
+  width: 100%;
+  padding:6.5px;
+  border: none;
+  font-size: 0.65rem;
+  background-color: var(--toyota-white);
+}
+.form-group input[type="text"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="email"]:focus,
+.form-group select:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.select-group {
+  position: relative;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper select {
+  appearance: none;
+  padding-right: 30px;
+  cursor: pointer;
+  height: 27px;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--toyota-black);
+  font-size: 0.8rem;
+  pointer-events: none;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 15px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-top: 2px;
+  margin-right: 10px;
+}
+
+.checkbox-group span {
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.toyota-text {
+  font-weight: bold;
+}
+
+.submit-btn {
+  background-color:var(--toyota-white) ;
+  color: var(--toyota-black);
+  border: none;
+  cursor: pointer;
+  padding: 8px 8px;
+  font-size: 0.6rem;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #e4e0e0;
+}
+
+.arrow {
+  margin-left: 4px;
+}
+
+.form-note {
+  font-size: 0.7rem;
+  margin-top: 12px;
+  line-height: 1.4;
+}
+
+.info-section {
+  flex: 0 0 68%;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--toyota-white);
+ 
+}
+
+.info-image {
+  height: 170px;
+  width: 170rem;
+  background-image: url('../../../assets/serviceappointment.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+
+.info-content {
+  position: absolute;
+  bottom: 0;
+  left: -16px;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.85);
+  width: 100%;
+  margin-bottom: 18.5rem;
+  
+}
+
+.info-content h2 {
+  font-size: 1.6rem;
+  margin: 0 0 12px;
+  color: var(--toyota-black);
+  font-weight: normal;
+}
+
+.info-content p {
+  margin: 0;
+  line-height: 1.5;
+  color: var(--toyota-dark-gray);
+  font-size: 0.9rem;
+}
+
+.info-dots {
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.dot.active {
+  background-color: var(--toyota-red);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .service-appointment-container {
+    flex-direction: column;
+  }
+  
+  .form-section, .info-section {
+    flex: 0 0 100%;
+  }
+  
+  .info-section {
+    height: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-section {
+    padding: 15px;
+  }
+  
+  .info-section {
+    height: 350px;
+  }
+  
+  .info-content {
+    padding: 15px;
+  }
+  
+  .info-content h2 {
+    font-size: 1.4rem;
+  }
+}
