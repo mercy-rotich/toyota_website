@@ -10,7 +10,7 @@ const ServiceNavbar = () => {
   const serviceNavItems = [
     { title: ' HOME', path: '/services/home' },  
     { title: 'BOOK SERVICE APPOINTMENT', path: '/services/serviceappointment' },
-    { title: 'SERVICE CORNER', path: '/services/history' },
+    { title: 'SERVICE CORNER', path: '/services/servicecorner' },
     { title: 'SHOP', path: '/services/shop' },
     { title: 'SERVICE COST CALCULATOR', path: '/services/warranty' },
     { title: 'SERVICE DEALER LOCATOR', path: '/services/servicedealerlocator' },
