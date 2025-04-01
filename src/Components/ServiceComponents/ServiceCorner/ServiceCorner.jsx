@@ -1,11 +1,46 @@
 import React, { useState } from 'react';
 import './ServiceCorner.css';
 
+// Import logo images for the white circles
+import tglossLogo from '../../../assets/serviceshop-image1.png';
+import tsecureLogo from '../../../assets/serviceshop-image1.png';
+import tsmilesLogo from '../../../assets/serviceshop-image1.png';
+import tclubLogo from '../../../assets/serviceshop-image1.png';
+import xmainLogo from '../../../assets/serviceshop-image1.png';
+import connectLogo from '../../../assets/serviceshop-image1.png';
+// Import background images
+import tglossBackground from '../../../assets/servicecorner-image1.jpg';
+import tsecureBackground from '../../../assets/servicecorner-image1.jpg';
+import tsmilesBackground from '../../../assets/servicecorner-image1.jpg';
+import tyreBackground from '../../../assets/servicecorner-image1.jpg';
+import bactaklenzBackground from '../../../assets/servicecorner-image1.jpg';
+import partsBackground from '../../../assets/servicecorner-image1.jpg';
+
 const ServiceCorner = () => {
   const [showAll, setShowAll] = useState(false);
 
   const toggleView = () => {
     setShowAll(!showAll);
+  };
+
+  // Map of logo images for the white circles
+  const logoImages = {
+    'TGLOSS': tglossLogo,
+    'TSECURE': tsecureLogo,
+    'TSMILES': tsmilesLogo,
+    'TCLUB': tclubLogo,
+    'XMAIN': xmainLogo,
+    'CONNECT': connectLogo
+  };
+
+  // Map of background images for the tiles
+  const backgroundImages = {
+    'tgloss': tglossBackground,
+    'tsecure': tsecureBackground,
+    'tsmiles': tsmilesBackground,
+    'tyre': tyreBackground,
+    'bactaklenz': bactaklenzBackground,
+    'parts': partsBackground
   };
 
   // First view services (limited)
@@ -14,9 +49,9 @@ const ServiceCorner = () => {
       id: 'tgloss', 
       title: 'T GLOSS', 
       subtitle: 'SERVICE SUPER MARKET', 
-      color: '#b10018', 
+      color: '#ee1e39', 
       icon: 'TGLOSS',
-      backgroundImage: true
+      backgroundImage: true,
     },
     { 
       id: 'tsecure', 
@@ -27,11 +62,11 @@ const ServiceCorner = () => {
       backgroundImage: true
     },
     { 
-      id: 'empty', 
-      title: '', 
-      subtitle: '', 
+      id: 'parts', 
+      title: 'TOYOTA PARTS CONNECT', 
+      subtitle: 'SERVICE SUPER MARKET', 
       color: '#b10018', 
-      icon: null,
+      icon: 'CONNECT',
       backgroundImage: true
     },
     { 
@@ -74,14 +109,7 @@ const ServiceCorner = () => {
       icon: null,
       backgroundImage: true
     },
-    { 
-      id: 'parts', 
-      title: 'TOYOTA PARTS CONNECT', 
-      subtitle: 'SERVICE SUPER MARKET', 
-      color: '#b10018', 
-      icon: 'CONNECT',
-      backgroundImage: true
-    },
+    
     { 
       id: 'viewall', 
       title: 'VIEW ALL', 
@@ -94,6 +122,7 @@ const ServiceCorner = () => {
 
   // All services for expanded view
   const allServices = [
+    
     { 
       id: 'express', 
       title: 'TOYOTA EXPRESS MAINTENANCE', 
@@ -340,6 +369,16 @@ const ServiceCorner = () => {
   const renderIcon = (iconKey) => {
     if (!iconKey) return null;
     
+    // If we have a logo image for this icon key, use it
+    if (logoImages[iconKey]) {
+      return (
+        <div className="service-icon">
+          <img src={logoImages[iconKey]} alt={iconKey} className="service-logo" />
+        </div>
+      );
+    }
+    
+    // Fallback to text if no logo is available
     return (
       <div className="service-icon">
         <span>{iconKey}</span>
@@ -364,7 +403,11 @@ const ServiceCorner = () => {
         {service.backgroundImage && (
           <div 
             className="service-background-image" 
-            style={{ backgroundImage: `url(/api/placeholder/400/320)` }}
+            style={{ 
+              backgroundImage: backgroundImages[service.id] 
+                ? `url(${backgroundImages[service.id]})` 
+                : `url(/api/placeholder/400/320)` 
+            }}
           ></div>
         )}
         {renderIcon(service.icon)}
@@ -381,6 +424,7 @@ const ServiceCorner = () => {
     <div className="toyota-service-container">
       <div className="toyota-service-header">
         <h1>Toyota Service</h1>
+      
       </div>
 
       <div className={`toyota-service-grid ${showAll ? 'expanded-view' : 'limited-view'}`}>

@@ -7,7 +7,7 @@
     --toyota-hover-gray: #e6e6e6;
     
     
-    --toyota-dark-red: #b10018;
+    --toyota-dark-red: #ee1e39;
     --toyota-orange-red: #ff4b38;
     --toyota-orange: #ff6e40;
     --toyota-light-orange: #ff8c40;
@@ -15,6 +15,8 @@
     --toyota-yellow: #ffd540;
     --toyota-gold: #e7c272;
   }
+  
+
   
   .toyota-service-container {
     font-family: 'Arial', sans-serif;
@@ -117,6 +119,13 @@
     font-size: 10px;
     font-weight: bold;
     z-index: 3;
+    overflow: hidden;
+    padding: 5px;
+  }
+  .service-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
   
   .view-all, .back-button {
