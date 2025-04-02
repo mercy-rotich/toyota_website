@@ -235,7 +235,7 @@ export default function ServicePartDistributor() {
                   >
                     <svg width="26" height="40" viewBox="0 0 24 36">
                       <path d="M12 0C5.383 0 0 5.383 0 12c0 9.164 12 24 12 24s12-14.836 12-24C24 5.383 18.617 0 12 0zm0 16c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4z" 
-                        fill="#eb0a1e" />
+                        fill="#eb0a1e" z-index="0"/>
                     </svg>
                   </div>
                 ))}
