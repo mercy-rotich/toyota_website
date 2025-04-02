@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import './ServiceCostCalculator.css'
+import './OwnersManual.css'
 
-const ServiceCostCalculator = () => {
+const OwnersManual = () => {
   const [formData, setFormData] = useState({
     name: '',
     mobile: '',
@@ -126,4 +126,4 @@ const ServiceCostCalculator = () => {
   );
 };
 
-export default ServiceCostCalculator;
+export default OwnersManual;

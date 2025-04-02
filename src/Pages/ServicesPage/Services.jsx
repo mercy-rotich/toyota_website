@@ -9,7 +9,8 @@ import ServiceShop from '../../Components/ServiceComponents/ServiceShop/ServiceS
 import ServiceCorner from '../../Components/ServiceComponents/ServiceCorner/ServiceCorner';
 import ServicePartDistributor from '../../Components/ServiceComponents/ServicePartDistributor/ServicePartDistributor';
 import ServiceFAQ from '../../Components/ServiceComponents/ServiceFAQ/ServiceFAQ';
-import ServiceCostCalculator from '../../Components/ServiceComponents/ServiceCostCalculator/ServiceCostCalculator';
+import ServiceCostCalculator from '../../Components/ServiceComponents/OwnersManual/OwnersManual';
+import OwnersManual from '../../Components/ServiceComponents/OwnersManual/OwnersManual';
 // Simple fallback components for missing components
 const BookAppointment = () => <div className="service-page">Book Appointment Page</div>;
 // const ServiceShop = () => <div className="service-page">Service Shop Page</div>;
@@ -53,7 +54,7 @@ const Services = () => {
           <Route path="home" element={<ServicesHome />} />
           <Route path="servicescontact" element={<ServicesContact />} />
           <Route path="serviceappointment" element={<ServiceAppointment/>} />
-          <Route path="costcalculator" element={<ServiceCostCalculator/>} />
+          <Route path="ownersmanual" element={<OwnersManual/>} />
           <Route path="servicecorner" element={<ServiceCorner/>} />
           <Route path="shop" element={<ServiceShop />} />
           <Route path="partdistributor" element={<ServicePartDistributor />} />
