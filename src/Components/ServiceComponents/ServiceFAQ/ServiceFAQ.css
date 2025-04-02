@@ -1,12 +1,4 @@
-:root {
-    --toyota-red: #eb0a1e;
-    --toyota-black: #000000;
-    --toyota-white: #ffffff;
-    --toyota-gray: #f5f5f5;
-    --toyota-dark-gray: #333333;
-    --toyota-hover-gray: #e6e6e6;
-  }
-  
+
   .toyota-faq-container {
     display: flex;
     font-family: Arial, sans-serif;
@@ -15,7 +7,6 @@
     margin: 0 auto;
     padding: 10px;
     margin-top: 6rem;
-    
   }
   
   .toyota-faq-left {
@@ -36,19 +27,13 @@
   .toyota-faq-image-container {
     position: relative;
     margin-top: 50px;
-   
   }
-  .toyota-faq-image-container img{
+  
+  .toyota-faq-image-container img {
     height: 300px;
     width: 550px;
     margin-top: -50px;
     margin-left: -20px;
-  }
-  
-  .toyota-faq-person-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
   }
   
   .toyota-faq-response {
@@ -63,7 +48,6 @@
     color: var(--toyota-black);
     margin-left: -20px;
     margin-bottom: 5px;
-    
   }
   
   .awesome-text {
@@ -81,24 +65,28 @@
     position: relative;
   }
   
-  .toyota-faq-divider {
-    border-top: 1px solid var(--toyota-dark-gray);
-    margin: 20px 0;
-    
-  }
-  .toyota-faq-divider2 {
-    border-top: 1px solid var(--toyota-dark-gray);
-    margin: 20px 0;
-    margin-left: 45px;
-    
+  
+  .toyota-faq-box {
+    border: 1px solid #fcfcfc;
+    border-radius: 4px;
+    padding: 20px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    margin-top: 1rem;
+    margin-right: 1rem;
   }
   
   .toyota-faq-list {
-    padding: 0 20px;
+    padding: 0;
   }
   
   .toyota-faq-item {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+  }
+  
+  .toyota-faq-item:last-child {
+    margin-bottom: 5px;
   }
   
   .toyota-faq-question {
@@ -128,18 +116,14 @@
   }
   
   .toyota-faq-footer {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    width: 100%;
-    padding-top: 10px;
+    position: relative;
+    text-align: right;
+    margin-right: 20px;
   }
   
   .toyota-faq-pagination {
-    text-align: right;
     font-size: 0.9rem;
     color: var(--toyota-dark-gray);
-    margin-right: 20px;
   }
   
   @media screen and (max-width: 768px) {

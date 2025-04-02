@@ -40,8 +40,7 @@ const ServiceFAQ = () => {
         </div>
       </div>
       <div className="toyota-faq-right">
-        <div className="toyota-faq-divider"></div>
-        <div className="toyota-faq-list">
+        <div className="toyota-faq-box">
           {faqs.map((faq, index) => (
             <div key={index} className="toyota-faq-item">
               <div className="toyota-faq-question">
@@ -53,7 +52,6 @@ const ServiceFAQ = () => {
           ))}
         </div>
         <div className="toyota-faq-footer">
-          <div className="toyota-faq-divider2"></div>
           <div className="toyota-faq-pagination">
             {currentPage}/{totalPages}
           </div>
