@@ -7,6 +7,7 @@ import ServicesContact from '../../Components/ServiceComponents/ServicesContact/
 import ServiceAppointment from '../../Components/ServiceComponents/ServiceAppointment/ServiceAppointment';
 import ServiceShop from '../../Components/ServiceComponents/ServiceShop/ServiceShop';
 import ServiceCorner from '../../Components/ServiceComponents/ServiceCorner/ServiceCorner';
+import ServicePartDistributor from '../../Components/ServiceComponents/ServicePartDistributor/ServicePartDistributor';
 // Simple fallback components for missing components
 const BookAppointment = () => <div className="service-page">Book Appointment Page</div>;
 // const ServiceShop = () => <div className="service-page">Service Shop Page</div>;
@@ -52,6 +53,7 @@ const Services = () => {
           <Route path="serviceappointment" element={<ServiceAppointment/>} />
           <Route path="servicecorner" element={<ServiceCorner/>} />
           <Route path="shop" element={<ServiceShop />} />
+          <Route path="partdistributor" element={<ServicePartDistributor />} />
           <Route path="*" element={<ServicesFallback />} />
         </Route>
       </Routes>
