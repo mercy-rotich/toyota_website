@@ -147,13 +147,13 @@
   }
   
   .info-content {
-    position: absolute;
+    position: relative;
     bottom: 0;
     left:0;
     padding: 25px 0;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255);
     width: 100%;
-    margin-bottom: 18rem;
+    margin-top: 7rem;
     z-index: 0;
     
   }
