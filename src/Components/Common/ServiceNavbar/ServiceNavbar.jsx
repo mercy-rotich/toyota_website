@@ -16,7 +16,7 @@ const ServiceNavbar = () => {
     { title: 'SERVICE DEALER LOCATOR', path: '/services/servicedealerlocator' },
     { title: 'OWNERS MANUAL', path: '/services/ownersmanual' },
     { title: 'PART DISTRIBUTOR', path: '/services/partdistributor' },
-    { title: 'FAQ', path: '/services/faq' },
+    { title: 'FAQ', path: '/services/servicefaq' },
     { title: 'CONTACT US', path: '/services/servicescontact' },
     
   ];

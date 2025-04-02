@@ -1,0 +1,158 @@
+:root {
+    --toyota-red: #eb0a1e;
+    --toyota-black: #000000;
+    --toyota-white: #ffffff;
+    --toyota-gray: #f5f5f5;
+    --toyota-dark-gray: #333333;
+    --toyota-hover-gray: #e6e6e6;
+  }
+  
+  .toyota-faq-container {
+    display: flex;
+    font-family: Arial, sans-serif;
+    background-color: var(--toyota-white);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 6rem;
+    
+  }
+  
+  .toyota-faq-left {
+    flex: 0 0 40%;
+    position: relative;
+  }
+  
+  .toyota-faq-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--toyota-black);
+    margin-bottom: 20px;
+    text-transform: none;
+    line-height: 1.2;
+    margin-left: -20px;
+  }
+  
+  .toyota-faq-image-container {
+    position: relative;
+    margin-top: 50px;
+   
+  }
+  .toyota-faq-image-container img{
+    height: 300px;
+    width: 550px;
+    margin-top: -50px;
+    margin-left: -20px;
+  }
+  
+  .toyota-faq-person-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .toyota-faq-response {
+    position: absolute;
+    bottom: -55px;
+    z-index: 2;
+  }
+  
+  .response-text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--toyota-black);
+    margin-left: -20px;
+    margin-bottom: 5px;
+    
+  }
+  
+  .awesome-text {
+    font-family: 'Brush Script MT', cursive;
+    color: var(--toyota-red);
+    font-size: 3rem;
+    line-height: 1;
+    margin-top: -14px;
+    margin-left: -30px;
+  }
+  
+  .toyota-faq-right {
+    flex: 0 0 60%;
+    padding-left: 40px;
+    position: relative;
+  }
+  
+  .toyota-faq-divider {
+    border-top: 1px solid var(--toyota-dark-gray);
+    margin: 20px 0;
+    
+  }
+  .toyota-faq-divider2 {
+    border-top: 1px solid var(--toyota-dark-gray);
+    margin: 20px 0;
+    margin-left: 45px;
+    
+  }
+  
+  .toyota-faq-list {
+    padding: 0 20px;
+  }
+  
+  .toyota-faq-item {
+    margin-bottom: 30px;
+  }
+  
+  .toyota-faq-question {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2px;
+  }
+  
+  .toyota-faq-bullet {
+    color: var(--toyota-red);
+    font-size: 1.5rem;
+    margin-right: 10px;
+    line-height: 1;
+  }
+  
+  .toyota-faq-question-text {
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--toyota-black);
+  }
+  
+  .toyota-faq-answer {
+    color: var(--toyota-dark-gray);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding-left: 25px;
+  }
+  
+  .toyota-faq-footer {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 100%;
+    padding-top: 10px;
+  }
+  
+  .toyota-faq-pagination {
+    text-align: right;
+    font-size: 0.9rem;
+    color: var(--toyota-dark-gray);
+    margin-right: 20px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .toyota-faq-container {
+      flex-direction: column;
+    }
+    
+    .toyota-faq-left, .toyota-faq-right {
+      flex: 0 0 100%;
+    }
+    
+    .toyota-faq-right {
+      padding-left: 0;
+      margin-top: 40px;
+    }
+  }
