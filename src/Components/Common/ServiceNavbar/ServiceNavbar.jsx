@@ -12,7 +12,7 @@ const ServiceNavbar = () => {
     { title: 'BOOK SERVICE APPOINTMENT', path: '/services/serviceappointment' },
     { title: 'SERVICE CORNER', path: '/services/servicecorner' },
     { title: 'SHOP', path: '/services/shop' },
-    { title: 'SERVICE COST CALCULATOR', path: '/services/warranty' },
+    { title: 'SERVICE COST CALCULATOR', path: '/services/costcalculator' },
     { title: 'SERVICE DEALER LOCATOR', path: '/services/servicedealerlocator' },
     { title: 'OWNERS MANUAL', path: '/services/ownersmanual' },
     { title: 'PART DISTRIBUTOR', path: '/services/partdistributor' },
