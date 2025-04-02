@@ -31,7 +31,7 @@ const OwnersManual = () => {
   };
 
   return (
-    <div className="service-cost-container">
+    <div className="owners-manual-container">
       <div className="form-section">
         <div className="booking-header">
           <div className="calendar-icon">

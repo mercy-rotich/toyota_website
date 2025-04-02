@@ -1,5 +1,5 @@
 
-.service-cost-container {
+.owners-manual-container {
     display: flex;
     width: 100%;
     max-width: 1200px;
@@ -15,7 +15,8 @@
     
   }
   
-  .service-cost-container .form-section {
+.owners-manual-container 
+  .form-section {
     flex: 0 0 32%;
     background-color: var(--toyota-red);
     
@@ -25,79 +26,79 @@
     
   }
   
-  .booking-header {
+  .owners-manual-container .booking-header {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
   }
   
-  .calendar-icon {
+  .owners-manual-container .calendar-icon {
     margin-right: 15px;
   }
   
-  .calendar-icon svg {
+  .owners-manual-container .calendar-icon svg {
     fill: var(--toyota-white);
     width: 30px;
     height: 30px;
   }
   
-  .booking-header h2 {
+  .owners-manual-container .booking-header h2 {
     margin: 0;
     font-size: 1.3rem;
     font-weight: bold;
   }
   
-  .booking-header p {
+  .owners-manual-container .booking-header p {
     margin: 5px 0 0;
     font-size: 0.75rem;
     letter-spacing: 0.5px;
   }
   
-  .form-group {
+  .owners-manual-container .form-group {
     margin-bottom: 12px;
   }
   
-  .form-group input[type="text"],
-  .form-group input[type="tel"],
-  .form-group input[type="email"],
-  .form-group select {
+  .owners-manual-container .form-group input[type="text"],
+  .owners-manual-container .form-group input[type="tel"],
+  .owners-manual-container .form-group input[type="email"],
+  .owners-manual-container .form-group select {
     width: 100%;
     padding:6.5px;
     border: none;
     font-size: 0.65rem;
     background-color: var(--toyota-white);
   }
-  .form-group input[type="text"]:focus,
-  .form-group input[type="tel"]:focus,
-  .form-group input[type="email"]:focus,
-  .form-group select:focus {
+  .owners-manual-container .form-group input[type="text"]:focus,
+  .owners-manual-container .form-group input[type="tel"]:focus,
+  .owners-manual-container .form-group input[type="email"]:focus,
+  .owners-manual-container .form-group select:focus {
     outline: none;
     border: none;
     box-shadow: none;
   }
   
   
-  .checkbox-group {
+  .owners-manual-container .checkbox-group {
     display: flex;
     align-items: flex-start;
     margin-top: 15px;
   }
   
-  .checkbox-group input[type="checkbox"] {
+  .owners-manual-container .checkbox-group input[type="checkbox"] {
     margin-top: 2px;
     margin-right: 10px;
   }
   
-  .checkbox-group span {
+  .owners-manual-container .checkbox-group span {
     font-size: 0.75rem;
     line-height: 1.4;
   }
   
-  .toyota-text {
+  .owners-manual-container .toyota-text {
     font-weight: bold;
   }
   
-  .submit-btn {
+  .owners-manual-container .submit-btn {
     background-color:var(--toyota-white) ;
     color: var(--toyota-black);
     border: none;
@@ -109,21 +110,21 @@
     transition: background-color 0.3s;
   }
   
-  .submit-btn:hover {
+  .owners-manual-container .submit-btn:hover {
     background-color: #e4e0e0;
   }
   
-  .arrow {
+  .owners-manual-container .arrow {
     margin-left: 4px;
   }
   
-  .form-note {
+  .owners-manual-container .form-note {
     font-size: 0.7rem;
     margin-top: 12px;
     line-height: 1.4;
   }
   
-  .info-section {
+  .owners-manual-container .info-section {
     flex: 0 0 68%;
     position: relative;
     overflow: hidden;
@@ -134,7 +135,7 @@
   }
   
   
-  .info-image {
+  .owners-manual-container .info-image {
     height: 170px;
     width: 170rem;
     background-image: url('../../../assets/serviceappointment.jpg'); 
@@ -146,7 +147,7 @@
     left: 0;
   }
   
-  .info-content {
+  .owners-manual-container .info-content {
     position: relative;
     bottom: 0;
     left:0;
@@ -158,21 +159,21 @@
     
   }
   
-  .info-content h2 {
+  .owners-manual-container .info-content h2 {
     font-size: 1.6rem;
     margin: 0 0 12px;
     color: var(--toyota-black);
     font-weight: normal;
   }
   
-  .info-content p {
+  .owners-manual-container .info-content p {
     margin: 0;
     line-height: 1.5;
     color: var(--toyota-dark-gray);
     font-size: 0.9rem;
   }
   
-  .info-dots {
+  .owners-manual-container .info-dots {
     position: absolute;
     bottom: 15px;
     right: 25px;
@@ -180,14 +181,14 @@
     gap: 6px;
   }
   
-  .dot {
+  .owners-manual-container .dot {
     width: 8px;
     height: 8px;
     background-color: #ccc;
     border-radius: 50%;
   }
   
-  .dot.active {
+  .owners-manual-container .dot.active {
     background-color: var(--toyota-red);
   }
   

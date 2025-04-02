@@ -1,0 +1,223 @@
+:root {
+  --toyota-red: #EB0A1E;
+  --toyota-white: #FFFFFF;
+  --toyota-black: #1A1A1A;
+  --toyota-dark-gray: #4A4A4A;
+}
+
+.service-cost-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 7rem;
+  height: 387px;
+}
+
+.service-cost-container .form-section {
+  flex: 0 0 32%;
+  background-color: var(--toyota-red);
+  color: var(--toyota-white);
+  padding: 20px;
+}
+
+.service-cost-container .booking-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.service-cost-container .calendar-icon {
+  margin-right: 15px;
+}
+
+.service-cost-container .calendar-icon svg {
+  fill: var(--toyota-white);
+  width: 30px;
+  height: 30px;
+}
+
+.service-cost-container .booking-header h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.service-cost-container .booking-header p {
+  margin: 5px 0 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.service-cost-container .form-group {
+  margin-bottom: 12px;
+}
+
+.service-cost-container .form-group input[type="text"],
+.service-cost-container .form-group input[type="tel"],
+.service-cost-container .form-group input[type="email"],
+.service-cost-container .form-group select {
+  width: 100%;
+  padding: 6.5px;
+  border: none;
+  font-size: 0.65rem;
+  background-color: var(--toyota-white);
+}
+
+.service-cost-container .form-group input[type="text"]:focus,
+.service-cost-container .form-group input[type="tel"]:focus,
+.service-cost-container .form-group input[type="email"]:focus,
+.service-cost-container .form-group select:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.service-cost-container .checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 15px;
+}
+
+.service-cost-container .checkbox-group input[type="checkbox"] {
+  margin-top: 2px;
+  margin-right: 10px;
+}
+
+.service-cost-container .checkbox-group span {
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.service-cost-container .toyota-text {
+  font-weight: bold;
+}
+
+.service-cost-container .submit-btn {
+  background-color: var(--toyota-white);
+  color: var(--toyota-black);
+  border: none;
+  cursor: pointer;
+  padding: 8px 16px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.service-cost-container .submit-btn:hover {
+  background-color: #e4e0e0;
+}
+
+.service-cost-container .arrow {
+  margin-left: 4px;
+}
+
+.service-cost-container .form-note {
+  font-size: 0.7rem;
+  margin-top: 12px;
+  line-height: 1.4;
+}
+
+.service-cost-container .info-section {
+  flex: 0 0 68%;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--toyota-white);
+  border-top: 4px solid var(--toyota-red);
+}
+
+.service-cost-container .info-image {
+  height: 170px;
+  width: 170rem;
+  background-image: url('../../../assets/serviceappointment.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.service-cost-container .info-content {
+  position: relative;
+  bottom: 0;
+  left:0;
+  padding: 25px 0;
+  background-color: rgba(255, 255, 255);
+  width: 100%;
+  margin-top: 7rem;
+  z-index: 0;
+}
+
+.service-cost-container .info-content h2 {
+  font-size: 1.6rem;
+  margin: 0 0 12px;
+  color: var(--toyota-black);
+  font-weight: normal;
+}
+
+.service-cost-container .info-content p {
+  margin: 0;
+  line-height: 1.5;
+  color: var(--toyota-dark-gray);
+  font-size: 0.9rem;
+}
+
+.service-cost-container .info-dots {
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+  display: flex;
+  gap: 6px;
+}
+
+.service-cost-container .dot {
+  width: 8px;
+  height: 8px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.service-cost-container .dot.active {
+  background-color: var(--toyota-red);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .service-cost-container {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .service-cost-container .form-section,
+  .service-cost-container .info-section {
+    flex: 0 0 100%;
+  }
+  
+  .service-cost-container .info-section {
+    height: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-cost-container .form-section {
+    padding: 15px;
+  }
+  
+  .service-cost-container .info-section {
+    height: 350px;
+  }
+  
+  .service-cost-container .info-content {
+    padding: 15px;
+  }
+  
+  .service-cost-container .info-content h2 {
+    font-size: 1.4rem;
+  }
+}
