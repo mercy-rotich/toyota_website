@@ -59,7 +59,7 @@
   padding: 6.5px;
   border: none;
   font-size: 0.65rem;
-  background-color: rgb(238, 232, 232);
+  background-color: rgb(224, 224, 224);
 }
 
 .service-cost-container .form-group input[type="text"]:focus,

@@ -124,12 +124,13 @@
     cursor: not-allowed;
   }
   
-  .view-all {
+  .press-release-container .view-all {
     text-align: right;
     margin-top: 20px;
+    
   }
   
-  .view-all a {
+  .press-release-container .view-all a {
     color: #333;
     font-size: 14px;
     font-weight: bold;
@@ -138,11 +139,11 @@
     align-items: center;
   }
   
-  .view-all a:hover {
+  .press-release-container.view-all a:hover {
     text-decoration: underline;
   }
   
-  .view-all span {
+  .press-release-container .view-all span {
     font-size: 18px;
     margin-left: 5px;
   }

@@ -421,7 +421,7 @@ const ServiceCorner = () => {
   };
 
   return (
-    <div className="toyota-service-container">
+    <div className="service-corner-container">
       <div className="toyota-service-header">
         <h1>Toyota Service</h1>
       
