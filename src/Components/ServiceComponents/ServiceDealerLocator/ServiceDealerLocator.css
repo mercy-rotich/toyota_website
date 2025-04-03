@@ -1,0 +1,171 @@
+:root {
+    --toyota-red: #eb0a1e;
+    --toyota-black: #000000;
+    --toyota-white: #ffffff;
+    --toyota-gray: #f5f5f5;
+    --toyota-dark-gray: #333333;
+    --toyota-hover-gray: #e6e6e6;
+  }
+  
+
+  
+  body {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .service-dealer-locator {
+    width: 100%;
+    min-height: 400px;
+    background-color: #fff;
+    position: absolute;
+    margin-top: 7rem;
+  }
+  
+  .service-dealer-locator .content-wrapper {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    min-height: 400px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Left Panel Styling */
+  .service-dealer-locator .left-panel {
+    width: 350px;
+    padding: 0;
+    background-color: #fff;
+    border-right: 1px solid #eaeaea;
+    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+  }
+  
+  .service-dealer-locator .parts-distributor-header {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    padding-bottom: 15px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .service-dealer-locator .location-pin-icon {
+    margin-right: 10px;
+    margin-top: 4px;
+  }
+  
+  .service-dealer-locator .header-content h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #333;
+  }
+  
+  .service-dealer-locator .header-content p {
+    font-size: 10px;
+    color: #666;
+    font-weight: normal;
+  }
+  
+  .service-dealer-locator .select-area {
+    padding: 20px;
+    background-color: #fff;
+    
+  }
+  
+  .service-dealer-locator .select-group {
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .service-dealer-locator .select-wrapper {
+    position: relative;
+  }
+  
+  .service-dealer-locator .toyota-select {
+    width: 100%;
+    height: 44px;
+    padding: 0 15px;
+    background-color: var(--toyota-red);
+    color: white;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+  }
+  
+  .service-dealer-locator .toyota-select option {
+    background-color: white;
+    color: #333;
+    padding: 10px;
+  }
+  
+  .service-dealer-locator .toyota-select:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  .service-dealer-locator .service-dealer-locator .select-arrow {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  .service-dealer-locator .current-location-option {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .service-dealer-locator .current-location-option p {
+    font-size: 11px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .service-dealer-locator .location-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  @media (max-width: 992px) {
+    .service-dealer-locator .content-wrapper {
+      flex-direction: column;
+    }
+  
+    .service-dealer-locator .left-panel {
+      flex: none;
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #eaeaea;
+    }
+  
+
+  }
+  
+  @media (max-width: 576px) {
+    .service-dealer-locator .parts-distributor-header {
+      flex-direction: column;
+    }
+    
+    .service-dealer-locator .location-pin-icon {
+      margin-bottom: 10px;
+    }
+  }
