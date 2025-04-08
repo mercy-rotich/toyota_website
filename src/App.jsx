@@ -5,6 +5,8 @@ import Footer from "./Components/Common/Footer/Footer";
 import HomePage from "./Pages/HomePage";
 import ContactUsPage from "./Components/ServiceComponents/ContactUs/ContactUs";
 import Services from "./Pages/ServicesPage/Services";
+import Tshields from "./Pages/ServicesPage/Tshields/Tshields";
+import SafetyRecall from "./Pages/ServicesPage/SafetyRecall/SafetyRecall";
 
 // Fallback component for debugging route issues
 const NotFound = () => (
@@ -25,6 +27,8 @@ const App = () => {
         
         
         <Route path="/services/*" element={<Services />} />
+        <Route path="/tshields" element={<Tshields/>} />
+        <Route path="/safetyrecall" element={<SafetyRecall/>} />
         
         {/* Catch all for debugging */}
         <Route path="*" element={<NotFound />} />

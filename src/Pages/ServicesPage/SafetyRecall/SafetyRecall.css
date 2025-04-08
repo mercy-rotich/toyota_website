@@ -1,0 +1,233 @@
+/* ToyotaRecallPage.css */
+.recall-page-container {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+    margin-top: 5rem;
+  }
+  
+  /* Header Section Styles */
+  .recall-page-container .header-section {
+    background-color: #f5f5f5;
+    padding: 30px 0;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .recall-page-container .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .recall-page-container .icon-container {
+    margin-right: 20px;
+  }
+  
+  .recall-page-container .car-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #e5001c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .recall-page-container .car-icon-inner {
+    width: 35px;
+    height: 15px;
+    background-color: white;
+    position: relative;
+  }
+  
+  .recall-page-container .car-icon-inner:before,
+  .recall-page-container .car-icon-inner:after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    bottom: -4px;
+  }
+  
+  .recall-page-container .car-icon-inner:before {
+    left: 3px;
+  }
+  
+  .recall-page-container .car-icon-inner:after {
+    right: 3px;
+  }
+  
+  .recall-page-container  .header-text {
+    flex: 1;
+  }
+  
+  .recall-page-container .header-text h1 {
+    color: #222;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .recall-page-container  .header-text p {
+    color: #555;
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  /* Form Section Styles */
+  .recall-page-container .form-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+  }
+  
+  .recall-page-container .form-instruction {
+    margin-bottom: 25px;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  .recall-page-container .form-container {
+    max-width: 800px;
+  }
+  
+  .recall-page-container  .input-label {
+    border-left: 4px solid #e5001c;
+    padding-left: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .recall-page-container .input-label h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    color: #222;
+  }
+  
+  .recall-page-container  .input-group {
+    margin-bottom: 20px;
+  }
+  
+   .recall-page-container.vin-input, .recall-page-container .captcha-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  .recall-page-container .captcha-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .recall-page-container .captcha-image {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 3px;
+    max-width: 200px;
+  }
+  
+  .recall-page-container .captcha-image span {
+    font-family: 'Courier New', monospace;
+    font-style: italic;
+    font-size: 20px;
+    color: #555;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 3px;
+    letter-spacing: 2px;
+  }
+  
+  .recall-page-container .refresh-captcha {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .recall-page-container .refresh-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #777;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .recall-page-container .refresh-icon:before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #777;
+    border-right: 2px solid #777;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transform: rotate(45deg);
+  }
+  
+  .recall-page-container .button-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .recall-page-container .submit-button {
+    background-color: #e5001c;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 12px 30px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .recall-page-container .submit-button:hover {
+    background-color: #c50017;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .recall-page-container .header-content {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .recall-page-container .icon-container {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+    
+    .recall-page-container .captcha-container {
+      align-items: flex-start;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .recall-page-container .header-text h1 {
+      font-size: 20px;
+    }
+    
+    .recall-page-container .header-text p {
+      font-size: 14px;
+    }
+    
+    .recall-page-container .form-instruction {
+      font-size: 14px;
+    }
+  }

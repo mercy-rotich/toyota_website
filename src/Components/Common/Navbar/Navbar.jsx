@@ -42,8 +42,8 @@ const Navbar = () => {
       title:'SERVICE',
       dropdown:[
         { title: 'service', link: '/services' },
-        { title: 'T SHIELS & DIY', link: '/models/hyryder' },
-        { title: 'Safety Recall', link: '/models/innova-hycross' },
+        { title: 'T SHIELS & DIY', link: '/tshields' },
+        { title: 'Safety Recall', link: '/safetyrecall' },
       ]
     },
     {
