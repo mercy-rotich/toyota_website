@@ -1,85 +1,146 @@
-// ToyotaRecallPage.jsx
-import React, { useState } from 'react';
-import './Tshields.css';
+import { useState } from 'react';
+import { X } from 'lucide-react';
+import './Tshields.css'
+import t_image1 from '../../../assets/awesome-image1.jpg'
 
-const Tshields = () => {
-  const [vin, setVin] = useState('');
-  const [captcha, setCaptcha] = useState('');
+export default function TShield() {
+  const [selectedVideo, setSelectedVideo] = useState(null);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle submission logic here
-    console.log('Submitted VIN:', vin, 'Captcha:', captcha);
-    alert('Vehicle information submitted successfully!');
-    setVin('');
-    setCaptcha('');
+  const videos = [
+    {
+      id: 1,
+      title: "Panoramic Moon Roof",
+      thumbnail: t_image1,
+      videoId: "aye8rty3PfE"
+    },
+    {
+      id: 2,
+      title: "Fuel Mileage Tips - Hycross Hybrid",
+      thumbnail: t_image1,
+      videoId: "dQw4w9WgXcQ"
+    },
+    {
+      id: 3,
+      title: "Hybrid Battery Cooling - Hyryder",
+      thumbnail: t_image1,
+      videoId: "jNQXAC9IVRw"
+    },
+    {
+      id: 4,
+      title: "Flat Tyre Replacement - Hyryder",
+      thumbnail: t_image1,
+      videoId: "ZTt-kJBI6RY"
+    },
+    {
+      id: 5,
+      title: "Vehicle Maintenance Tips",
+      thumbnail: t_image1,
+      videoId: "LXb3EKWsInQ"
+    },
+    {
+      id: 6,
+      title: "Eco Driving Mode Features",
+      thumbnail: t_image1,
+      videoId: "7PpIS1RtBm8"
+    },
+    {
+      id: 7,
+      title: "Safety Features Overview",
+      thumbnail: t_image1,
+      videoId: "UGxkFRXexhY"
+    },
+    {
+      id: 8,
+      title: "Dashboard Controls Guide",
+      thumbnail: t_image1,
+      videoId: "FFrag8ll85w"
+    }
+  ];
+
+  const openVideo = (video) => {
+    setSelectedVideo(video);
+  };
+
+  const closeVideo = () => {
+    setSelectedVideo(null);
   };
 
   return (
-    <div className="tshields-page-container">
-      <div className="header-section">
-        <div className="header-content">
-          <div className="icon-container">
-            <div className="car-icon">
-              <div className="car-icon-inner"></div>
-            </div>
+    <div className="tshield-container">
+     
+      <div className="hero-banner">
+        <div className="banner-content">
+          
+          <div className="banner-logo-container">
+            
           </div>
-          <div className="header-text">
-            <h1>RECALL, SPECIAL SERVICE & OTHER CAMPAIGNS</h1>
-            <p>Get the information of current running Recall, Special Service & Other Campaigns</p>
-          </div>
+          
+         
         </div>
       </div>
 
-      <div className="form-section">
-        <p className="form-instruction">
-          If you would like to find out if your vehicle is affected by a Recall or Special Service campaign, please enter your Vehicle Identification Number:
+      {/* Main Content */}
+      <div className="main-content">
+        <h1 className="main-title">
+          T SHIELD: Toyota Safety Hygiene & Innovative Education for Long Term Durability
+        </h1>
+        
+        <p className="main-description">
+          T SHIELD is a proactive initiative from Toyota to enhance knowledge about vehicle usage to minimize the unwanted cost and to have best efficiency of your vehicle.
         </p>
-
-        <div className="form-container">
-          <div className="input-label">
-            <h3>VEHICLE IDENTIFICATION NUMBER (VIN) / FRAME NUMBER</h3>
-          </div>
-
-          <form onSubmit={handleSubmit}>
-            <div className="input-group">
-              <input 
-                type="text" 
-                className="vin-input"
-                placeholder="ENTER VIN / FRAME NUMBER"
-                value={vin}
-                onChange={(e) => setVin(e.target.value)}
-                required
-              />
-            </div>
-
-            <div className="captcha-container">
-              <div className="captcha-image">
-                <span>Bk20gm</span>
-                <button type="button" className="refresh-captcha">
-                  <i className="refresh-icon"></i>
-                </button>
+        
+        {/* Video Card Grid */}
+        <div className="video-grid">
+          {videos.map((video) => (
+            <div 
+              key={video.id} 
+              className="video-card"
+              onClick={() => openVideo(video)}
+            >
+              <div className="thumbnail-container">
+                <img src={video.thumbnail} alt={video.title} className="thumbnail-image" />
+                <div className="play-button-overlay">
+                  <div className="play-button">
+                    <div className="play-icon"></div>
+                  </div>
+                </div>
               </div>
-              <div className="input-group">
-                <input 
-                  type="text" 
-                  className="captcha-input"
-                  placeholder="ENTER CAPTCHA"
-                  value={captcha}
-                  onChange={(e) => setCaptcha(e.target.value)}
-                  required
-                />
+              <div className="video-info">
+                <h3 className="video-title">{video.title}</h3>
               </div>
             </div>
-
-            <div className="button-container">
-              <button type="submit" className="submit-button">SUBMIT</button>
-            </div>
-          </form>
+          ))}
         </div>
       </div>
+
+      {/* Video Modal */}
+      {selectedVideo && (
+        <div className="modal-overlay">
+          <div className="modal-container">
+            <button 
+              onClick={closeVideo}
+              className="close-button"
+            >
+              <X size={24} />
+            </button>
+            <div className="modal-content">
+              <div className="video-player-container">
+                <iframe
+                  className="video-player"
+                  src={`https://www.youtube.com/embed/${selectedVideo.videoId}`}
+                  title={selectedVideo.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="modal-title-container">
+                <h2 className="modal-title">{selectedVideo.title}</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
-};
-
-export default Tshields;
+}
