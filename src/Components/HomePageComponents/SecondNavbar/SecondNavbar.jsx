@@ -106,7 +106,7 @@ const SecondNavbar = () => {
     { 
       id: "exchange",
       text: "EXCHANGE CAR", 
-      link: "/exchange-car",
+      link: "/exchangecar",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M7.5 21.5L9 20L5.5 16.5L9 13L7.5 11.5L2.5 16.5L7.5 21.5Z" fill="#EB0A1E"/>
