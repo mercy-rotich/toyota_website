@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './ExchangeCar.css';
 import carImage from '../../../../assets/glanza-image.jpg';
 
 const ExchangeCar = () => {
   // Add state to track the current active step (1, 2, or 3)
   const [activeStep, setActiveStep] = useState(1);
+  // Add ref for progress tracking section
+  const progressTrackingRef = useRef(null);
   
   const [formData, setFormData] = useState({
     name: '',
@@ -41,8 +43,10 @@ const ExchangeCar = () => {
   const nextStep = () => {
     if (activeStep < 3) {
       setActiveStep(activeStep + 1);
-      // Scroll to top of the form when changing steps
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Scroll to the progress tracking section
+      if (progressTrackingRef.current) {
+        progressTrackingRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -50,8 +54,10 @@ const ExchangeCar = () => {
   const prevStep = () => {
     if (activeStep > 1) {
       setActiveStep(activeStep - 1);
-      // Scroll to top of the form when changing steps
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Scroll to the progress tracking section
+      if (progressTrackingRef.current) {
+        progressTrackingRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -95,7 +101,8 @@ const ExchangeCar = () => {
         </div>
 
         <form onSubmit={handleSubmit}>
-          <div className="form-progress">
+          {/* Adding ref to the progress tracking section */}
+          <div className="form-progress" ref={progressTrackingRef}>
             <div className="progress-bar">
               <div className={`progress-step ${activeStep >= 1 ? 'active' : ''}`}>
                 <div className="step-circle">1</div>
