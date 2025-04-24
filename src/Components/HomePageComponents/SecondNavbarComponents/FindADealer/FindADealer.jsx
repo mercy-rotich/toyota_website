@@ -266,7 +266,8 @@ const FindADealer = () => {
             <div className="location-search">
               <p>Let us find dealers near your current location</p>
               <button onClick={getCurrentLocation} className="location-btn">
-                <i className="fas fa-crosshairs"></i> Use My Current Location
+                <i className="fas fa-crosshairs"></i> 
+                Use My Current Location
               </button>
               {locationError && <p className="error-message">{locationError}</p>}
             </div>

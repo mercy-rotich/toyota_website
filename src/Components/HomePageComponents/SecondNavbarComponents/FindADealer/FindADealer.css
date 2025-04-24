@@ -213,32 +213,38 @@
   color: #555;
 }
 
-.location-btn {
-  background-color: #e50000;
-  color: white;
-  border: none;
-  border-radius: 50px;
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
+.find-dealer-container .location-btn {
+    background-color: #e50000;
+    color: white;
+    border: none;
+    width: 10.5rem;
+    padding: 1.5rem 0;
+    
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; 
+    box-shadow: 0 2px 6px rgba(229, 0, 0, 0.2);  
+    position: relative;
+    overflow: hidden; 
 }
 
-.location-btn i {
+.find-dealer-container .location-btn i {
   font-size: 1.2rem;
+  margin-left: 0.4rem;
 }
 
-.location-btn:hover {
+.find-dealer-container.location-btn:hover {
   background-color: #c30000;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(229, 0, 0, 0.3);
 }
 
-.error-message {
+.find-dealer-container .error-message {
   color: #e50000;
   margin-top: 1rem;
   font-size: 0.9rem;
@@ -250,12 +256,12 @@
 }
 
 /* Input Styles */
-.input-container {
+.find-dealer-container .input-container {
   margin-bottom: 1.5rem;
   position: relative;
 }
 
-.input-container label {
+.find-dealer-container .input-container label {
   display: block;
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
@@ -285,13 +291,13 @@
 }
 
 /* Dropdown Styles */
-.location-selection {
+.find-dealer-container .location-selection {
   display: flex;
   gap: 1rem;
   margin-bottom: 1.5rem;
 }
 
-.dropdown-container {
+.find-dealer-container .dropdown-container {
   flex: 1;
 }
 
@@ -309,13 +315,13 @@
 }
 
 /* Submit Button */
-.submit-section {
+.find-dealer-container .submit-section {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
 }
 
-.submit-btn {
+.find-dealer-container .submit-btn {
   background-color: #e50000;
   color: white;
   border: none;
@@ -328,19 +334,19 @@
   letter-spacing: 1px;
 }
 
-.submit-btn:hover {
+.find-dealer-container .submit-btn:hover {
   background-color: #c30000;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(229, 0, 0, 0.3);
 }
 
-.submit-btn.loading {
+.find-dealer-container .submit-btn.loading {
   background-color: #ff6666;
   cursor: wait;
   position: relative;
 }
 
-.submit-btn.loading::after {
+.find-dealer-container .submit-btn.loading::after {
   content: '';
   position: absolute;
   width: 20px;
@@ -357,12 +363,12 @@
 }
 
 /* Loading Section */
-.loading-section {
+.find-dealer-container .loading-section {
   text-align: center;
   padding: 3rem 1rem;
 }
 
-.loading-spinner {
+.find-dealer-container .loading-spinner {
   border: 4px solid rgba(229, 0, 0, 0.1);
   border-left-color: #e50000;
   border-radius: 50%;
@@ -376,17 +382,17 @@
   to { transform: rotate(360deg); }
 }
 
-.loading-section p {
+.find-dealer-container .loading-section p {
   color: #666;
   font-size: 1.1rem;
 }
 
 /* Results Section */
-.results-section {
+.find-dealer-container .results-section {
   margin-bottom: 2rem;
 }
 
-.dealer-results {
+.find-dealer-container .dealer-results {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 1.5rem;
