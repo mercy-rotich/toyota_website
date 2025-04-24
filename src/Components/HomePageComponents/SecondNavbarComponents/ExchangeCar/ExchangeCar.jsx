@@ -3,6 +3,9 @@ import './ExchangeCar.css';
 import carImage from '../../../../assets/glanza-image.jpg';
 
 const ExchangeCar = () => {
+  // Add state to track the current active step (1, 2, or 3)
+  const [activeStep, setActiveStep] = useState(1);
+  
   const [formData, setFormData] = useState({
     name: '',
     address1: '',
@@ -34,10 +37,32 @@ const ExchangeCar = () => {
     });
   };
 
+  // Function to move to the next step
+  const nextStep = () => {
+    if (activeStep < 3) {
+      setActiveStep(activeStep + 1);
+      // Scroll to top of the form when changing steps
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  // Function to move to the previous step
+  const prevStep = () => {
+    if (activeStep > 1) {
+      setActiveStep(activeStep - 1);
+      // Scroll to top of the form when changing steps
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Form submitted successfully!');
+    if (activeStep < 3) {
+      nextStep();
+    } else {
+      console.log('Form submitted:', formData);
+      alert('Form submitted successfully!');
+    }
   };
 
   const handleVerify = (field) => {
@@ -72,63 +97,71 @@ const ExchangeCar = () => {
         <form onSubmit={handleSubmit}>
           <div className="form-progress">
             <div className="progress-bar">
-              <div className="progress-step active">
+              <div className={`progress-step ${activeStep >= 1 ? 'active' : ''}`}>
                 <div className="step-circle">1</div>
                 <div className="step-label">Vehicle Selection</div>
               </div>
-              <div className="progress-step">
+              <div className={`progress-step ${activeStep >= 2 ? 'active' : ''}`}>
                 <div className="step-circle">2</div>
                 <div className="step-label">Personal Details</div>
               </div>
-              <div className="progress-step">
+              <div className={`progress-step ${activeStep >= 3 ? 'active' : ''}`}>
                 <div className="step-circle">3</div>
                 <div className="step-label">Exchange Details</div>
               </div>
             </div>
           </div>
 
-          <div className="car-selection-section card-panel">
-            <h3 className="section-title">Select Your Toyota Model</h3>
-            <div className="dropdown-container">
-              <select className="select-dropdown" defaultValue="">
-                <option value="" disabled>URBAN CRUISER HYRYDER</option>
-              </select>
-            </div>
-
-            <div className="location-selection">
+          {/* Step 1 - Vehicle Selection */}
+          {activeStep === 1 && (
+            <div className="car-selection-section card-panel">
+              <h3 className="section-title">Select Your Toyota Model</h3>
               <div className="dropdown-container">
-                <label htmlFor="state">State</label>
-                <select className="select-dropdown" id="state" name="state" value={formData.state} onChange={handleInputChange}>
-                  <option value="" disabled>SELECT STATE*</option>
-                  <option value="delhi">Delhi</option>
-                  <option value="maharashtra">Maharashtra</option>
-                  <option value="karnataka">Karnataka</option>
+                <select className="select-dropdown" defaultValue="">
+                  <option value="" disabled>URBAN CRUISER HYRYDER</option>
                 </select>
               </div>
 
-              <div className="dropdown-container">
-                <label htmlFor="city">City</label>
-                <select className="select-dropdown" id="city" name="city" value={formData.city} onChange={handleInputChange}>
-                  <option value="" disabled>SELECT CITY*</option>
-                  <option value="mumbai">Mumbai</option>
-                  <option value="delhi">Delhi</option>
-                  <option value="bangalore">Bangalore</option>
+              <div className="location-selection">
+                <div className="dropdown-container">
+                  <label htmlFor="state">State</label>
+                  <select className="select-dropdown" id="state" name="state" value={formData.state} onChange={handleInputChange} required>
+                    <option value="" disabled>SELECT STATE*</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="maharashtra">Maharashtra</option>
+                    <option value="karnataka">Karnataka</option>
+                  </select>
+                </div>
+
+                <div className="dropdown-container">
+                  <label htmlFor="city">City</label>
+                  <select className="select-dropdown" id="city" name="city" value={formData.city} onChange={handleInputChange} required>
+                    <option value="" disabled>SELECT CITY*</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="bangalore">Bangalore</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="dropdown-container full-width">
+                <label htmlFor="dealer">Dealer</label>
+                <select className="select-dropdown" id="dealer" name="dealer" defaultValue="" required>
+                  <option value="" disabled>SELECT DEALER*</option>
+                  <option value="dealer1">Dealer 1</option>
+                  <option value="dealer2">Dealer 2</option>
+                  <option value="dealer3">Dealer 3</option>
                 </select>
               </div>
+              
+              <div className="submit-section">
+                <button type="button" className="submit-btn" onClick={nextStep}>NEXT</button>
+              </div>
             </div>
+          )}
 
-            <div className="dropdown-container full-width">
-              <label htmlFor="dealer">Dealer</label>
-              <select className="select-dropdown" id="dealer" name="dealer" defaultValue="">
-                <option value="" disabled>SELECT DEALER*</option>
-                <option value="dealer1">Dealer 1</option>
-                <option value="dealer2">Dealer 2</option>
-                <option value="dealer3">Dealer 3</option>
-              </select>
-            </div>
-          </div>
-
-          <div className="form-container">
+          {/* Step 2 - Personal Details */}
+          {activeStep === 2 && (
             <div className="form-section card-panel">
               <div className="personal-info">
                 <h3 className="section-title">Personal Information</h3>
@@ -168,6 +201,7 @@ const ExchangeCar = () => {
                       placeholder="Street address"
                       value={formData.address1}
                       onChange={handleInputChange}
+                      required
                     />
                   </div>
 
@@ -198,7 +232,14 @@ const ExchangeCar = () => {
                   <div className="location-selection">
                     <div className="dropdown-container">
                       <label htmlFor="state-address">State</label>
-                      <select className="select-dropdown" id="state-address" name="state" value={formData.state} onChange={handleInputChange}>
+                      <select 
+                        className="select-dropdown" 
+                        id="state-address" 
+                        name="state" 
+                        value={formData.state} 
+                        onChange={handleInputChange}
+                        required
+                      >
                         <option value="" disabled>SELECT STATE*</option>
                         <option value="delhi">Delhi</option>
                         <option value="maharashtra">Maharashtra</option>
@@ -208,7 +249,14 @@ const ExchangeCar = () => {
 
                     <div className="dropdown-container">
                       <label htmlFor="city-address">City</label>
-                      <select className="select-dropdown" id="city-address" name="city" value={formData.city} onChange={handleInputChange}>
+                      <select 
+                        className="select-dropdown" 
+                        id="city-address" 
+                        name="city" 
+                        value={formData.city} 
+                        onChange={handleInputChange}
+                        required
+                      >
                         <option value="" disabled>SELECT CITY*</option>
                         <option value="mumbai">Mumbai</option>
                         <option value="delhi">Delhi</option>
@@ -267,10 +315,20 @@ const ExchangeCar = () => {
                   </div>
                 </div>
               </div>
+              
+              <div className="navigation-buttons">
+                <div className="submit-section" style={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <button type="button" className="back-btn" onClick={prevStep} style={{ backgroundColor: '#aaa' }}>BACK</button>
+                  <button type="button" className="submit-btn" onClick={nextStep}>NEXT</button>
+                </div>
+              </div>
             </div>
+          )}
 
+          {/* Step 3 - Exchange Details */}
+          {activeStep === 3 && (
             <div className="form-section card-panel">
-              <h3 className="section-title">Additional Information</h3>
+              <h3 className="section-title">Exchange Details</h3>
 
               <div className="contact-preference">
                 <p>How would you like us to contact you?</p>
@@ -308,6 +366,7 @@ const ExchangeCar = () => {
                   name="preferredMeetingTime"
                   value={formData.preferredMeetingTime}
                   onChange={handleInputChange}
+                  required
                 >
                   <option value="" disabled>SELECT YOUR PREFERRED MEETING TIME*</option>
                   <option value="morning">Morning (9 AM - 12 PM)</option>
@@ -325,6 +384,7 @@ const ExchangeCar = () => {
                   placeholder="Enter model and year"
                   value={formData.currentOwnedCar}
                   onChange={handleInputChange}
+                  required
                 />
               </div>
 
@@ -339,6 +399,7 @@ const ExchangeCar = () => {
                     name="nextCarPurchaseDuration"
                     value={formData.nextCarPurchaseDuration}
                     onChange={handleInputChange}
+                    required
                   >
                     <option value="" disabled>SELECT DURATION*</option>
                     <option value="immediately">Immediately</option>
@@ -375,52 +436,59 @@ const ExchangeCar = () => {
                 </label>
               </div>
 
-              <div className="car-details-row">
-                <div className="dropdown-container">
-                  <label htmlFor="carMake">Car Make</label>
-                  <select 
-                    className="select-dropdown" 
-                    id="carMake"
-                    name="carMake"
-                    value={formData.carMake}
-                    onChange={handleInputChange}
-                  >
-                    <option value="" disabled>SELECT MAKE*</option>
-                    <option value="toyota">Toyota</option>
-                    <option value="honda">Honda</option>
-                    <option value="hyundai">Hyundai</option>
-                    <option value="maruti">Maruti</option>
-                  </select>
-                </div>
+              {formData.exchange && (
+                <>
+                  <div className="car-details-row">
+                    <div className="dropdown-container">
+                      <label htmlFor="carMake">Car Make</label>
+                      <select 
+                        className="select-dropdown" 
+                        id="carMake"
+                        name="carMake"
+                        value={formData.carMake}
+                        onChange={handleInputChange}
+                        required={formData.exchange}
+                      >
+                        <option value="" disabled>SELECT MAKE*</option>
+                        <option value="toyota">Toyota</option>
+                        <option value="honda">Honda</option>
+                        <option value="hyundai">Hyundai</option>
+                        <option value="maruti">Maruti</option>
+                      </select>
+                    </div>
 
-                <div className="dropdown-container">
-                  <label htmlFor="carModel">Car Model</label>
-                  <select 
-                    className="select-dropdown" 
-                    id="carModel"
-                    name="carModel"
-                    value={formData.carModel}
-                    onChange={handleInputChange}
-                  >
-                    <option value="" disabled>SELECT MODEL*</option>
-                    <option value="innova">Innova</option>
-                    <option value="fortuner">Fortuner</option>
-                    <option value="glanza">Glanza</option>
-                  </select>
-                </div>
-              </div>
+                    <div className="dropdown-container">
+                      <label htmlFor="carModel">Car Model</label>
+                      <select 
+                        className="select-dropdown" 
+                        id="carModel"
+                        name="carModel"
+                        value={formData.carModel}
+                        onChange={handleInputChange}
+                        required={formData.exchange}
+                      >
+                        <option value="" disabled>SELECT MODEL*</option>
+                        <option value="innova">Innova</option>
+                        <option value="fortuner">Fortuner</option>
+                        <option value="glanza">Glanza</option>
+                      </select>
+                    </div>
+                  </div>
 
-              <div className="input-container full-width">
-                <label htmlFor="expectedPrice">Expected Price</label>
-                <input
-                  type="text"
-                  id="expectedPrice"
-                  name="expectedPrice"
-                  placeholder="Enter expected price"
-                  value={formData.expectedPrice}
-                  onChange={handleInputChange}
-                />
-              </div>
+                  <div className="input-container full-width">
+                    <label htmlFor="expectedPrice">Expected Price</label>
+                    <input
+                      type="text"
+                      id="expectedPrice"
+                      name="expectedPrice"
+                      placeholder="Enter expected price"
+                      value={formData.expectedPrice}
+                      onChange={handleInputChange}
+                      required={formData.exchange}
+                    />
+                  </div>
+                </>
+              )}
 
               <div className="consent-section">
                 <div className="checkbox-option">
@@ -443,6 +511,7 @@ const ExchangeCar = () => {
                       name="agreeToTerms"
                       checked={formData.agreeToTerms}
                       onChange={handleInputChange}
+                      required
                     />
                     <span className="checkbox-custom"></span>
                     I hereby agree to receive emails, calls and SMS related to promotional activities and services, by or on behalf of TKM. <a href="#" className="terms-link">Know More</a>
@@ -450,11 +519,14 @@ const ExchangeCar = () => {
                 </div>
               </div>
 
-              <div className="submit-section">
-                <button type="submit" className="submit-btn">SUBMIT</button>
+              <div className="navigation-buttons">
+                <div className="submit-section" style={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <button type="button" className="back-btn" onClick={prevStep} style={{ backgroundColor: '#aaa' }}>BACK</button>
+                  <button type="submit" className="submit-btn">SUBMIT</button>
+                </div>
               </div>
             </div>
-          </div>
+          )}
 
           <div className="disclaimer">
             <p><strong>Disclaimer:</strong> The information that you submit will not be used or distributed for any reason other than to fulfill your request.</p>
