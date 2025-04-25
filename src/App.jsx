@@ -10,6 +10,7 @@ import SafetyRecall from "./Pages/ServicesPage/SafetyRecall/SafetyRecall";
 import ExchangeCar from "./Components/HomePageComponents/SecondNavbarComponents/ExchangeCar/ExchangeCar";
 import FindADealer from "./Components/HomePageComponents/SecondNavbarComponents/FindADealer/FindADealer";
 import TestDrive from "./Components/HomePageComponents/SecondNavbarComponents/TestDrive/TestDrive";
+import PriceList from "./Components/HomePageComponents/SecondNavbarComponents/PriceList/PriceList";
 
 // Fallback component for debugging route issues
 const NotFound = () => (
@@ -35,6 +36,7 @@ const App = () => {
         <Route path="/exchangecar" element={<ExchangeCar/>} />
         <Route path="/find-dealer" element={<FindADealer/>} />
         <Route path="/test-drive" element={<TestDrive/>} />
+        <Route path="/price-list" element={<PriceList/>} />
         
         {/* Catch all for debugging */}
         <Route path="*" element={<NotFound />} />
