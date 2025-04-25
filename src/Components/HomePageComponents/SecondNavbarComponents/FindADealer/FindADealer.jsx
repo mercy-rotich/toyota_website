@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './FindADealer.css';
 import dealerImage from '../../../../assets/glanza-image.jpg'; // You'll need to add this image to your assets
 
 const FindADealer = () => {
-  // State for form inputs
+  // Original state for form inputs
   const [searchType, setSearchType] = useState('location');
   const [pincode, setPincode] = useState('');
   const [state, setState] = useState('');
@@ -13,6 +13,10 @@ const FindADealer = () => {
   const [locationError, setLocationError] = useState('');
   const [cityOptions, setCityOptions] = useState([]);
   const [searchPerformed, setSearchPerformed] = useState(false);
+  
+  // Add ref and state for scroll detection
+  const dealerSectionRef = useRef(null);
+  const [showMapButton, setShowMapButton] = useState(true);
 
   // Sample dealer data (this would come from your API in a real application)
   const sampleDealers = [
@@ -89,6 +93,34 @@ const FindADealer = () => {
       { value: "madurai", label: "Madurai" }
     ]
   };
+
+  // Add scroll event listener to track when to hide the map button
+  useEffect(() => {
+    const handleScroll = () => {
+      if (dealerSectionRef.current) {
+        const rect = dealerSectionRef.current.getBoundingClientRect();
+        // Check if the bottom of the dealer section is still visible
+        const dealerSectionBottom = rect.bottom;
+        const windowHeight = window.innerHeight;
+        
+        // If the bottom of the dealer section is above the viewport, hide the button
+        if (dealerSectionBottom <= 0) {
+          setShowMapButton(false);
+        } else {
+          setShowMapButton(true);
+        }
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    // Run once on mount to set initial state
+    handleScroll();
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   // Update city options when state changes
   useEffect(() => {
@@ -211,7 +243,7 @@ const FindADealer = () => {
   };
 
   return (
-    <div className="find-dealer-container">
+    <div className="find-dealer-container" ref={dealerSectionRef}>
       <div className="dealer-header">
         <div className="dealer-logo">
           <div className="logo-icon">
@@ -395,9 +427,13 @@ const FindADealer = () => {
             <span>Map will be displayed here with dealer locations</span>
           </div>
         </div>
-        <button className="map-toggle-btn">
-          <i className="fas fa-map"></i> View Map
-        </button>
+        
+        {/* Map button is only rendered when showMapButton is true */}
+        {showMapButton && (
+          <button className="map-toggle-btn">
+            <i className="fas fa-map"></i> View Map
+          </button>
+        )}
       </div>
       
       <div className="disclaimer">
