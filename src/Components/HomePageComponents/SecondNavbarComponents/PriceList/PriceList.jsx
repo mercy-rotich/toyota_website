@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './PriceList.css'; // Using your existing CSS
 import carimage from '../../../../assets/glanza-image.jpg'
 
+
 const PriceList = () => {
   
   const [state, setState] = useState('');
@@ -414,7 +415,7 @@ const PriceList = () => {
             <h2>Ready to Take the Next Step?</h2>
             <p>Visit a dealership near you or schedule a test drive to experience your favorite vehicle in person.</p>
             <div className="tpl-cta-buttons">
-              <button className="tpl-locate-dealer-btn">
+              <button  className="tpl-locate-dealer-btn">
                 <i className="fas fa-map-marker-alt"></i> Find a Dealer
               </button>
               <button className="tpl-test-drive-cta">
