@@ -27,8 +27,8 @@ const Footer = () => {
             <h4>Shopping Tools</h4>
             <ul>
               <li><a href="#">Offers & Promotions</a></li>
-              <li><a href="#">Request a Test Drive</a></li>
-              <li><a href="#">Find a Dealer</a></li>
+              <li><a href="/test-drive">Request a Test Drive</a></li>
+              <li><a href="/find-dealer">Find a Dealer</a></li>
               <li><a href="#">Build Your Toyota</a></li>
               <li><a href="#">Finance Calculator</a></li>
             </ul>
@@ -37,10 +37,10 @@ const Footer = () => {
           <div className="footer-column">
             <h4>Owners</h4>
             <ul>
-              <li><a href="#">Service & Maintenance</a></li>
+              <li><a href="home">Service & Maintenance</a></li>
               <li><a href="#">Warranties</a></li>
               <li><a href="#">Genuine Parts</a></li>
-              <li><a href="#">Owner's Manual</a></li>
+              <li><a href="ownersmanual">Owner's Manual</a></li>
               <li><a href="#">Roadside Assistance</a></li>
             </ul>
           </div>
